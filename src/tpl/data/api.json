@@ -1,0 +1,1681 @@
+{
+    "pools": [
+        {
+            "id": "Black",
+            "coin": {
+                "type": "BLACK",
+                "name": "Black",
+                "symbol": "BLACK",
+                "website": "https://blackproject.tech/",
+                "market": "",
+                "family": "ethereum",
+                "algorithm": "Ethhash",
+                "twitter": "https://twitter.com/StarCashCrypto",
+                "discord": "https://discord.gg/8ZPYuRqATE",
+                "telegram": "",
+                "canonicalName": "Black"
+            },
+            "ports": {
+                "4073": {
+                    "listenAddress": "*",
+                    "name": "GPU",
+                    "difficulty": 0.1,
+                    "varDiff": {
+                        "minDiff": 0.1,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                },
+                "40731": {
+                    "listenAddress": "*",
+                    "name": "NiceHash",
+                    "difficulty": 2,
+                    "varDiff": {
+                        "minDiff": 2,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                },
+                "40732": {
+                    "listenAddress": "*",
+                    "name": "GPU SSL",
+                    "difficulty": 0.1,
+                    "varDiff": {
+                        "minDiff": 0.1,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": true,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 1,
+                "payoutScheme": "PPLNS",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {
+                    "gas": 21000,
+                    "maxFeePerGas": 50000000000,
+                    "keepUncles": false,
+                    "keepTransactionFees": false
+                }
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "0x57d842221Ce53CdACc9dEA47319dB62BCdBfCD4f",
+            "addressInfoLink": "http://explorer.blackproject.space/address/0x57d842221Ce53CdACc9dEA47319dB62BCdBfCD4f",
+            "poolStats": {
+                "connectedMiners": 5,
+                "poolHashrate": 1471204480,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "Black-Black",
+                "networkHashrate": 37698831572.29952,
+                "networkDifficulty": 498683668808,
+                "nextNetworkTarget": "0x0000000002346f98a057693d9d9632e0a8f400a1bb25adf18d7cddb87cd279f4",
+                "nextNetworkBits": "",
+                "lastNetworkBlockTime": "2023-03-10T19:11:08.6977277Z",
+                "blockHeight": 474455,
+                "connectedPeers": 11,
+                "rewardType": "POW"
+            },
+            "topMiners": [
+                {
+                    "miner": "0xd7a86c4f6b5209fbb47a58fd121dc9c8fd098907",
+                    "hashrate": 2863311530,
+                    "sharesPerSecond": 0.333
+                },
+                {
+                    "miner": "0x19f986f85518dd13cf44a33f3dccbff30a67b6ec",
+                    "hashrate": 1838104575,
+                    "sharesPerSecond": 0.202
+                },
+                {
+                    "miner": "0x78716ab104b380bb8fdf63dd1a071558e4ea4f7c",
+                    "hashrate": 689067574,
+                    "sharesPerSecond": 0.068
+                },
+                {
+                    "miner": "0xb80a2af4fa208a5c2509cf77a65f9f383238988f",
+                    "hashrate": 386064476,
+                    "sharesPerSecond": 0.09
+                },
+                {
+                    "miner": "0xfee3d8228988de1d330fd07a16510e38226a4fc4",
+                    "hashrate": 123000280,
+                    "sharesPerSecond": 0.077
+                },
+                {
+                    "miner": "0x824d2407359850cbff180ab5c6e8c4636e0b70f8",
+                    "hashrate": 102866858,
+                    "sharesPerSecond": 0.125
+                },
+                {
+                    "miner": "0xd81db549b0e4bd0b98bfea5f11338078a680d6a6",
+                    "hashrate": 78665067,
+                    "sharesPerSecond": 0.085
+                },
+                {
+                    "miner": "0x07b3e657252b0fe107df81bba007f41cadd04a94",
+                    "hashrate": 45351877,
+                    "sharesPerSecond": 0.071
+                },
+                {
+                    "miner": "0x84891ff0063170edd2c8e30c640832affdc681bc",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0x9cec33256b6d71021f14045ba1d101aa1c668a02",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0xa3a40854fef8c4ad68462898c9aee542dc2fcd61",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0xad1957640fe6aa81428a646fc2b3883b63b1cd87",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0x81cf68e30b7caeb435f1111ca211fb084452bd37",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0xcf4ea83ded9f0e3ee099416a139e69963b8496bd",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0x5d44365027880f2155fc0c4fe26df1ceba45616a",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                }
+            ],
+            "totalPaid": 147724.993539453474,
+            "totalBlocks": 11203,
+            "lastPoolBlockTime": "2023-03-10T19:06:41.173054Z",
+            "poolEffort": 0.9274144437819144
+        },
+        {
+            "id": "Black-solo",
+            "coin": {
+                "type": "BLACK",
+                "name": "Black-SOLO",
+                "symbol": "BLACK",
+                "website": "https://blackproject.tech/",
+                "market": "",
+                "family": "ethereum",
+                "algorithm": "Ethhash",
+                "twitter": "https://twitter.com/StarCashCrypto",
+                "discord": "https://discord.gg/8ZPYuRqATE",
+                "telegram": "",
+                "canonicalName": "Black-SOLO"
+            },
+            "ports": {
+                "4083": {
+                    "listenAddress": "*",
+                    "name": "GPU-SOLO",
+                    "difficulty": 0.1,
+                    "varDiff": {
+                        "minDiff": 0.1,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                },
+                "40832": {
+                    "listenAddress": "*",
+                    "name": "GPU SSL",
+                    "difficulty": 0.1,
+                    "varDiff": {
+                        "minDiff": 0.1,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": true,
+                    "tlsAuto": false
+                },
+                "40831": {
+                    "listenAddress": "*",
+                    "name": "NiceHash-SOLO",
+                    "difficulty": 2,
+                    "varDiff": {
+                        "minDiff": 2,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 1,
+                "payoutScheme": "SOLO",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {
+                    "gas": 21000,
+                    "maxFeePerGas": 50000000000,
+                    "keepUncles": false,
+                    "keepTransactionFees": false
+                }
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "0x57d842221Ce53CdACc9dEA47319dB62BCdBfCD4f",
+            "addressInfoLink": "http://explorer.blackproject.space/address/0x57d842221Ce53CdACc9dEA47319dB62BCdBfCD4f",
+            "poolStats": {
+                "connectedMiners": 1,
+                "poolHashrate": 377950304,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "Black-Black",
+                "networkHashrate": 37698831572.29952,
+                "networkDifficulty": 498683668808,
+                "nextNetworkTarget": "0x0000000002346f98a057693d9d9632e0a8f400a1bb25adf18d7cddb87cd279f4",
+                "nextNetworkBits": "",
+                "lastNetworkBlockTime": "2023-03-10T19:11:08.7722661Z",
+                "blockHeight": 474455,
+                "connectedPeers": 11,
+                "rewardType": "POW"
+            },
+            "topMiners": [
+                {
+                    "miner": "0xb97a244d5088b64182022dcc166df45d0b7a1b03",
+                    "hashrate": 1779230856,
+                    "sharesPerSecond": 0.6
+                },
+                {
+                    "miner": "0xb040a6cee88ff4dfad46fe1b209329bc23e11195",
+                    "hashrate": 1654191445,
+                    "sharesPerSecond": 0.8340000000000001
+                }
+            ],
+            "totalPaid": 3396.068504245190,
+            "totalBlocks": 127,
+            "lastPoolBlockTime": "2023-03-10T18:16:38.735929Z",
+            "poolEffort": 2.0851436554288694
+        },
+        {
+            "id": "altcoinchain",
+            "coin": {
+                "type": "ALT",
+                "name": "AltcoinChain",
+                "symbol": "ALT",
+                "website": "https://www.altcoinchain.org/",
+                "market": "",
+                "family": "ethereum",
+                "algorithm": "Ethhash",
+                "twitter": "https://twitter.com/chainAltcoin",
+                "discord": "https://discord.com/invite/hcXHyQP4Je",
+                "telegram": "https://t.me/AltcoinchainNews",
+                "canonicalName": "AltcoinChain"
+            },
+            "ports": {
+                "4074": {
+                    "listenAddress": "*",
+                    "name": "GPU-SMALL",
+                    "difficulty": 0.1,
+                    "varDiff": {
+                        "minDiff": 0.1,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                },
+                "40741": {
+                    "listenAddress": "*",
+                    "name": "ASIC",
+                    "difficulty": 2,
+                    "varDiff": {
+                        "minDiff": 2,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 1,
+                "payoutScheme": "PPLNS",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {
+                    "gas": 21000,
+                    "maxFeePerGas": 50000000000,
+                    "keepUncles": false,
+                    "keepTransactionFees": false
+                }
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "0xc1Fd61306BA909fd812289f39972C4B098c28074",
+            "addressInfoLink": "http://expedition.altcoinchain.org/address/0xc1Fd61306BA909fd812289f39972C4B098c28074",
+            "poolStats": {
+                "connectedMiners": 0,
+                "poolHashrate": 0,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "altcoinchain-altcoinchain",
+                "networkHashrate": 8218256521.244813,
+                "networkDifficulty": 130883159994,
+                "nextNetworkTarget": "0x0000000008669502520d2e2aee98cb32a9e88d7ada50f165a3c32b881b79f187",
+                "nextNetworkBits": "",
+                "lastNetworkBlockTime": "2023-03-10T19:11:04.1125192Z",
+                "blockHeight": 613107,
+                "connectedPeers": 11,
+                "rewardType": "POW"
+            },
+            "topMiners": [],
+            "totalPaid": 3973.226333905876,
+            "totalBlocks": 1989,
+            "lastPoolBlockTime": "2023-03-05T09:33:37.312594Z",
+            "poolEffort": 1.3765128675017344
+        },
+        {
+            "id": "altcoinchain-solo",
+            "coin": {
+                "type": "ALT",
+                "name": "AltcoinChain-SOLO",
+                "symbol": "ALT",
+                "website": "https://www.altcoinchain.org/",
+                "market": "",
+                "family": "ethereum",
+                "algorithm": "Ethhash",
+                "twitter": "https://twitter.com/chainAltcoin",
+                "discord": "https://discord.com/invite/hcXHyQP4Je",
+                "telegram": "https://t.me/AltcoinchainNews",
+                "canonicalName": "AltcoinChain-SOLO"
+            },
+            "ports": {
+                "4084": {
+                    "listenAddress": "*",
+                    "name": "GPU-SOLO",
+                    "difficulty": 0.1,
+                    "varDiff": {
+                        "minDiff": 0.1,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                },
+                "40841": {
+                    "listenAddress": "*",
+                    "name": "NiceHash-SOLO",
+                    "difficulty": 2,
+                    "varDiff": {
+                        "minDiff": 2,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 1,
+                "payoutScheme": "SOLO",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {
+                    "gas": 21000,
+                    "maxFeePerGas": 50000000000,
+                    "keepUncles": false,
+                    "keepTransactionFees": false
+                }
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "0xc1Fd61306BA909fd812289f39972C4B098c28074",
+            "addressInfoLink": "http://expedition.altcoinchain.org/address/0xc1Fd61306BA909fd812289f39972C4B098c28074",
+            "poolStats": {
+                "connectedMiners": 0,
+                "poolHashrate": 0,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "altcoinchain-altcoinchain",
+                "networkHashrate": 8218256521.244813,
+                "networkDifficulty": 130883159994,
+                "nextNetworkTarget": "0x0000000008669502520d2e2aee98cb32a9e88d7ada50f165a3c32b881b79f187",
+                "nextNetworkBits": "",
+                "lastNetworkBlockTime": "2023-03-10T19:11:04.1132001Z",
+                "blockHeight": 613107,
+                "connectedPeers": 11,
+                "rewardType": "POW"
+            },
+            "topMiners": [],
+            "totalPaid": 0,
+            "totalBlocks": 0,
+            "poolEffort": 0
+        },
+        {
+            "id": "Aves",
+            "coin": {
+                "type": "AVS",
+                "name": "Aves",
+                "symbol": "AVS",
+                "website": "https://avescoin.io/",
+                "market": "",
+                "family": "ethereum",
+                "algorithm": "Ethhash",
+                "twitter": "",
+                "discord": "https://discord.gg/nhA2zebJAZ",
+                "telegram": "",
+                "canonicalName": "Aves"
+            },
+            "ports": {
+                "4076": {
+                    "listenAddress": "*",
+                    "name": "GPU",
+                    "difficulty": 0.1,
+                    "varDiff": {
+                        "minDiff": 0.1,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                },
+                "40761": {
+                    "listenAddress": "*",
+                    "name": "NiceHashe",
+                    "difficulty": 2,
+                    "varDiff": {
+                        "minDiff": 2,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 1,
+                "payoutScheme": "PPLNS",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {
+                    "gas": 21000,
+                    "maxFeePerGas": 50000000000,
+                    "keepUncles": false,
+                    "keepTransactionFees": false
+                }
+            },
+            "clientConnectionTimeout": 1200,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "0x72Fa3F813a4af3744A87C527C45559060cBC8c8F",
+            "addressInfoLink": "https://avescan.io/address/0x72Fa3F813a4af3744A87C527C45559060cBC8c8F",
+            "poolStats": {
+                "connectedMiners": 0,
+                "poolHashrate": 0,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "aves-aves",
+                "networkHashrate": 81718575477.89072,
+                "networkDifficulty": 670043336920,
+                "nextNetworkTarget": "0x0000000001a415b11a6a1d83cf4651f3bc043d466be3e21f2a71439e18045584",
+                "nextNetworkBits": "",
+                "lastNetworkBlockTime": "2023-03-10T19:11:10.2646002Z",
+                "blockHeight": 639011,
+                "connectedPeers": 16,
+                "rewardType": "POW"
+            },
+            "topMiners": [
+                {
+                    "miner": "0x05bb9d352d40e36e248205c0425df481159f4fee",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0x371a6dd364b805c04cac7930c51a1252f7621d95",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0x3cb57e3f5ae61d777a385afbec4b4bfb8fde4948",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0x6d3e649266988c59f3d27a5f8ff96c021db6ca82",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0x7d0f7604f10de04eb6cc22b12f8fe06449c37a43",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0x933dda4e164b040c9dbe189be1f1e252abf559bd",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0xc973ce0ebad3fe3760246489ea3cc921a1641a36",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0xcde376afb407ad2261ea14b7109a870764b440bd",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0xdffdf81a03a073332239a92a7be02f9887ae6d97",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0xe4b1afadeeb5120cc4a73b8fab1c4d52416fe8f3",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0xe88d45c6cfead163efab25117780cbb5f51edf30",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                }
+            ],
+            "totalPaid": 9144.814107833997,
+            "totalBlocks": 127,
+            "lastPoolBlockTime": "2023-03-06T11:09:58.523327Z",
+            "poolEffort": 0.8174045014084096
+        },
+        {
+            "id": "Aves-solo",
+            "coin": {
+                "type": "AVS",
+                "name": "Aves-SOLO",
+                "symbol": "AVS",
+                "website": "https://avescoin.io/",
+                "market": "",
+                "family": "ethereum",
+                "algorithm": "Ethhash",
+                "twitter": "",
+                "discord": "https://discord.gg/nhA2zebJAZ",
+                "telegram": "",
+                "canonicalName": "Aves-SOLO"
+            },
+            "ports": {
+                "4086": {
+                    "listenAddress": "*",
+                    "name": "GPU-SOLO",
+                    "difficulty": 0.1,
+                    "varDiff": {
+                        "minDiff": 0.1,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                },
+                "40861": {
+                    "listenAddress": "*",
+                    "name": "NiceHash-SOLO",
+                    "difficulty": 2,
+                    "varDiff": {
+                        "minDiff": 2,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 1,
+                "payoutScheme": "SOLO",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {
+                    "gas": 21000,
+                    "maxFeePerGas": 50000000000,
+                    "keepUncles": false,
+                    "keepTransactionFees": false
+                }
+            },
+            "clientConnectionTimeout": 1200,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "0x72Fa3F813a4af3744A87C527C45559060cBC8c8F",
+            "addressInfoLink": "https://avescan.io/address/0x72Fa3F813a4af3744A87C527C45559060cBC8c8F",
+            "poolStats": {
+                "connectedMiners": 0,
+                "poolHashrate": 0,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "aves-aves",
+                "networkHashrate": 81718575477.89072,
+                "networkDifficulty": 670043336920,
+                "nextNetworkTarget": "0x0000000001a415b11a6a1d83cf4651f3bc043d466be3e21f2a71439e18045584",
+                "nextNetworkBits": "",
+                "lastNetworkBlockTime": "2023-03-10T19:11:10.2648533Z",
+                "blockHeight": 639011,
+                "connectedPeers": 16,
+                "rewardType": "POW"
+            },
+            "topMiners": [],
+            "totalPaid": 11.870000000000,
+            "totalBlocks": 4,
+            "lastPoolBlockTime": "2023-03-06T11:00:53.82184Z",
+            "poolEffort": 0.6061489948821442
+        },
+        {
+            "id": "Flora",
+            "coin": {
+                "type": "FLR",
+                "name": "Flora",
+                "symbol": "FLR",
+                "website": "https://florachain.org/",
+                "market": "",
+                "family": "ethereum",
+                "algorithm": "Ethhash",
+                "twitter": "",
+                "discord": "https://discord.gg/58DS5WCunz",
+                "telegram": "",
+                "canonicalName": "Flora"
+            },
+            "ports": {
+                "4075": {
+                    "listenAddress": "*",
+                    "name": "GPU",
+                    "difficulty": 0.1,
+                    "varDiff": {
+                        "minDiff": 0.1,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                },
+                "40751": {
+                    "listenAddress": "*",
+                    "name": "NiceHash",
+                    "difficulty": 2,
+                    "varDiff": {
+                        "minDiff": 2,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 1,
+                "payoutScheme": "PPLNS",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {
+                    "gas": 21000,
+                    "maxFeePerGas": 50000000000,
+                    "keepUncles": false,
+                    "keepTransactionFees": false
+                }
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "0x13560550D712e40480Aa7E5db9A3cdc0b630675e",
+            "addressInfoLink": "https://florascan.io/address/0x13560550D712e40480Aa7E5db9A3cdc0b630675e",
+            "poolStats": {
+                "connectedMiners": 1,
+                "poolHashrate": 19327352,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "Flora-Flora",
+                "networkHashrate": 190443107797.11945,
+                "networkDifficulty": 2381078632672,
+                "nextNetworkTarget": "0x0000000000763695b57c899cc06271d223f5e5be917eea9e4512ba1bc4b9fcd1",
+                "nextNetworkBits": "",
+                "lastNetworkBlockTime": "2023-03-10T19:10:48.5575252Z",
+                "blockHeight": 240324,
+                "connectedPeers": 14,
+                "rewardType": "POW"
+            },
+            "topMiners": [
+                {
+                    "miner": "0x8faf5783256295ecd352b4693d5fa9b5996011dc",
+                    "hashrate": 26843545,
+                    "sharesPerSecond": 0.062
+                },
+                {
+                    "miner": "0x1e66ccde73d5721bdcc183931cd54f5169f5106f",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0x81cf68e30b7caeb435f1111ca211fb084452bd37",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                },
+                {
+                    "miner": "0xe46f2ae26fb93cad33a6538c485a2d3c1f925dbc",
+                    "hashrate": 0,
+                    "sharesPerSecond": 0
+                }
+            ],
+            "totalPaid": 862.167819953979,
+            "totalBlocks": 180,
+            "lastPoolBlockTime": "2023-02-20T14:56:24.997982Z",
+            "poolEffort": 3.8357744665354008
+        },
+        {
+            "id": "Flora-solo",
+            "coin": {
+                "type": "FLR",
+                "name": "Flora-SOLO",
+                "symbol": "FLR",
+                "website": "https://florachain.org/",
+                "market": "",
+                "family": "ethereum",
+                "algorithm": "Ethhash",
+                "twitter": "",
+                "discord": "https://discord.gg/58DS5WCunz",
+                "telegram": "",
+                "canonicalName": "Flora-SOLO"
+            },
+            "ports": {
+                "4175": {
+                    "listenAddress": "*",
+                    "name": "GPU-SOLO",
+                    "difficulty": 0.1,
+                    "varDiff": {
+                        "minDiff": 0.1,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                },
+                "41751": {
+                    "listenAddress": "*",
+                    "name": "NiceHash-SOLO",
+                    "difficulty": 2,
+                    "varDiff": {
+                        "minDiff": 2,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 1,
+                "payoutScheme": "SOLO",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {
+                    "gas": 21000,
+                    "maxFeePerGas": 50000000000,
+                    "keepUncles": false,
+                    "keepTransactionFees": false
+                }
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "0x13560550D712e40480Aa7E5db9A3cdc0b630675e",
+            "addressInfoLink": "https://florascan.io/address/0x13560550D712e40480Aa7E5db9A3cdc0b630675e",
+            "poolStats": {
+                "connectedMiners": 0,
+                "poolHashrate": 0,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "Flora-Flora",
+                "networkHashrate": 190443107797.11945,
+                "networkDifficulty": 2381078632672,
+                "nextNetworkTarget": "0x0000000000763695b57c899cc06271d223f5e5be917eea9e4512ba1bc4b9fcd1",
+                "nextNetworkBits": "",
+                "lastNetworkBlockTime": "2023-03-10T19:10:48.5577616Z",
+                "blockHeight": 240324,
+                "connectedPeers": 14,
+                "rewardType": "POW"
+            },
+            "topMiners": [],
+            "totalPaid": 0,
+            "totalBlocks": 0,
+            "poolEffort": 0
+        },
+        {
+            "id": "octa",
+            "coin": {
+                "type": "OCTA",
+                "name": "OctaSpace",
+                "symbol": "OCTA",
+                "website": "https://octa.space/",
+                "market": "",
+                "family": "ethereum",
+                "algorithm": "Ethhash",
+                "twitter": "",
+                "discord": "https://discord.com/invite/24W42beE3Q",
+                "telegram": "",
+                "canonicalName": "OctaSpace"
+            },
+            "ports": {
+                "4078": {
+                    "listenAddress": "*",
+                    "name": "GPU",
+                    "difficulty": 1,
+                    "varDiff": {
+                        "minDiff": 0.1,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                },
+                "40781": {
+                    "listenAddress": "*",
+                    "name": "NiceHash",
+                    "difficulty": 2,
+                    "varDiff": {
+                        "minDiff": 2,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 1,
+                "payoutScheme": "PPLNS",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {
+                    "gas": 21000,
+                    "maxFeePerGas": 50000000000,
+                    "keepUncles": false,
+                    "keepTransactionFees": false
+                }
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 10,
+            "blockRefreshInterval": 20,
+            "poolFeePercent": 1,
+            "address": "0x68EC337891aE7d0839c13091ccE6a6107f2F4C51",
+            "addressInfoLink": "https://explorer.octa.space/address/0x68EC337891aE7d0839c13091ccE6a6107f2F4C51",
+            "poolStats": {
+                "connectedMiners": 0,
+                "poolHashrate": 0,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "octa-octa",
+                "networkHashrate": 67426451076.68667,
+                "networkDifficulty": 1518566987623,
+                "nextNetworkTarget": "0x0000000000b95b0c1f4e46e0bbb4c2e516f84ae8796aa1de7d24d7eba0a26816",
+                "nextNetworkBits": "",
+                "lastNetworkBlockTime": "2023-03-10T19:11:07.8824526Z",
+                "blockHeight": 1751490,
+                "connectedPeers": 15,
+                "rewardType": "POW"
+            },
+            "topMiners": [],
+            "totalPaid": 8.410000000000,
+            "totalBlocks": 2,
+            "lastPoolBlockTime": "2023-03-05T12:06:14.552999Z",
+            "poolEffort": 0.4728239931483261
+        },
+        {
+            "id": "octa-solo",
+            "coin": {
+                "type": "OCTA",
+                "name": "OctaSpace-SOLO",
+                "symbol": "OCTA",
+                "website": "https://octa.space/",
+                "market": "",
+                "family": "ethereum",
+                "algorithm": "Ethhash",
+                "twitter": "",
+                "discord": "https://discord.com/invite/24W42beE3Q",
+                "telegram": "",
+                "canonicalName": "OctaSpace-SOLO"
+            },
+            "ports": {
+                "4178": {
+                    "listenAddress": "*",
+                    "name": "GPU",
+                    "difficulty": 1,
+                    "varDiff": {
+                        "minDiff": 0.1,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                },
+                "41781": {
+                    "listenAddress": "*",
+                    "name": "NiceHash",
+                    "difficulty": 2,
+                    "varDiff": {
+                        "minDiff": 2,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 1,
+                "payoutScheme": "SOLO",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {
+                    "gas": 21000,
+                    "maxFeePerGas": 50000000000,
+                    "keepUncles": false,
+                    "keepTransactionFees": false
+                }
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 10,
+            "blockRefreshInterval": 20,
+            "poolFeePercent": 1,
+            "address": "0x68EC337891aE7d0839c13091ccE6a6107f2F4C51",
+            "addressInfoLink": "https://explorer.octa.space/address/0x68EC337891aE7d0839c13091ccE6a6107f2F4C51",
+            "poolStats": {
+                "connectedMiners": 0,
+                "poolHashrate": 0,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "octa-octa",
+                "networkHashrate": 67426451076.68667,
+                "networkDifficulty": 1518566987623,
+                "nextNetworkTarget": "0x0000000000b95b0c1f4e46e0bbb4c2e516f84ae8796aa1de7d24d7eba0a26816",
+                "nextNetworkBits": "",
+                "lastNetworkBlockTime": "2023-03-10T19:11:07.8822433Z",
+                "blockHeight": 1751490,
+                "connectedPeers": 15,
+                "rewardType": "POW"
+            },
+            "topMiners": [],
+            "totalPaid": 290.632101740000,
+            "totalBlocks": 85,
+            "lastPoolBlockTime": "2023-03-06T11:56:09.13251Z",
+            "poolEffort": 0
+        },
+        {
+            "id": "hive",
+            "coin": {
+                "type": "HVQ",
+                "name": "HiveCoin",
+                "symbol": "HVQ",
+                "website": "https://www.hivecoin.org/",
+                "market": "https://www.bitoreum.exchange/market/hvqusdt",
+                "family": "ravencoin",
+                "algorithm": "KawPow",
+                "twitter": "https://twitter.com/Hive_Coin_HVQ",
+                "discord": "",
+                "telegram": "",
+                "canonicalName": "HiveCoin"
+            },
+            "ports": {
+                "10001": {
+                    "listenAddress": "*",
+                    "name": "GPU and NiceHash",
+                    "difficulty": 0.5,
+                    "varDiff": {
+                        "minDiff": 0.5,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 1000,
+                "payoutScheme": "PPLNS",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {}
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "HPumi5EgqJURREdnhGx8KhDEQ3hhxmDHaM",
+            "addressInfoLink": "https://explorer.hivecoin.org/address/HPumi5EgqJURREdnhGx8KhDEQ3hhxmDHaM",
+            "poolStats": {
+                "connectedMiners": 0,
+                "poolHashrate": 0,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "Main",
+                "networkHashrate": 4820815236.832329,
+                "networkDifficulty": 64.684749291538,
+                "nextNetworkTarget": "0000000003f52500000000000000000000000000000000000000000000000000",
+                "nextNetworkBits": "1c03f525",
+                "lastNetworkBlockTime": "2023-03-10T19:08:16.4348494Z",
+                "blockHeight": 1013518,
+                "connectedPeers": 11,
+                "rewardType": "POW"
+            },
+            "topMiners": [],
+            "totalPaid": 19374.949861119796,
+            "totalBlocks": 12,
+            "lastPoolBlockTime": "2023-02-28T18:16:08.811574Z",
+            "poolEffort": 0.087505506583151
+        },
+        {
+            "id": "hive-solo",
+            "coin": {
+                "type": "HVQ",
+                "name": "HiveCoin-SOLO",
+                "symbol": "HVQ",
+                "website": "https://www.hivecoin.org/",
+                "market": "https://www.bitoreum.exchange/market/hvqusdt",
+                "family": "ravencoin",
+                "algorithm": "KawPow",
+                "twitter": "https://twitter.com/Hive_Coin_HVQ",
+                "discord": "",
+                "telegram": "",
+                "canonicalName": "HiveCoin-SOLO"
+            },
+            "ports": {
+                "11001": {
+                    "listenAddress": "*",
+                    "name": "GPU and NiceHash SOLO",
+                    "difficulty": 0.5,
+                    "varDiff": {
+                        "minDiff": 0.5,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 1000,
+                "payoutScheme": "SOLO",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {}
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "HPumi5EgqJURREdnhGx8KhDEQ3hhxmDHaM",
+            "addressInfoLink": "https://explorer.hivecoin.org/address/HPumi5EgqJURREdnhGx8KhDEQ3hhxmDHaM",
+            "poolStats": {
+                "connectedMiners": 0,
+                "poolHashrate": 0,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "Main",
+                "networkHashrate": 4820815236.832329,
+                "networkDifficulty": 64.684749291538,
+                "nextNetworkTarget": "0000000003f52500000000000000000000000000000000000000000000000000",
+                "nextNetworkBits": "1c03f525",
+                "lastNetworkBlockTime": "2023-03-10T19:08:16.4703751Z",
+                "blockHeight": 1013518,
+                "connectedPeers": 11,
+                "rewardType": "POW"
+            },
+            "topMiners": [],
+            "totalPaid": 0,
+            "totalBlocks": 0,
+            "poolEffort": 0
+        },
+        {
+            "id": "satox",
+            "coin": {
+                "type": "SATOX",
+                "name": "SatoxCoin",
+                "symbol": "SATOX",
+                "website": "https://www.satoverse.io/",
+                "market": "https://txbit.io/Trade/SATOX/USDT",
+                "family": "ravencoin",
+                "algorithm": "KawPow",
+                "twitter": "https://twitter.com/Satoverse_io",
+                "discord": "https://discord.com/invite/GFZYFuuHVq",
+                "telegram": "",
+                "canonicalName": "SatoxCoin"
+            },
+            "ports": {
+                "10003": {
+                    "listenAddress": "*",
+                    "name": "GPU and NiceHash",
+                    "difficulty": 0.5,
+                    "varDiff": {
+                        "minDiff": 0.5,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 10,
+                "payoutScheme": "PPLNS",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {}
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "Sjr7rqDQ38D3iTj3UgAeCmsUc6SD5euSB8",
+            "addressInfoLink": "https://xplore.satoverse.io/address/Sjr7rqDQ38D3iTj3UgAeCmsUc6SD5euSB8",
+            "poolStats": {
+                "connectedMiners": 2,
+                "poolHashrate": 32212254,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "Main",
+                "networkHashrate": 2919801363.214614,
+                "networkDifficulty": 41.749101659317,
+                "nextNetworkTarget": "000000000621bc00000000000000000000000000000000000000000000000000",
+                "nextNetworkBits": "1c0621bc",
+                "lastNetworkBlockTime": "2023-03-10T19:11:01.8393569Z",
+                "blockHeight": 80484,
+                "connectedPeers": 10,
+                "rewardType": "POW"
+            },
+            "topMiners": [
+                {
+                    "miner": "SNh8tH2xsjhGtbicJsQBzQRhdQfVtKVPWE",
+                    "hashrate": 138547332,
+                    "sharesPerSecond": 0.065
+                },
+                {
+                    "miner": "SQHUgZfzR4pCTYt4t5mnqqpBZHPUUk91BP",
+                    "hashrate": 59105054,
+                    "sharesPerSecond": 0.028
+                }
+            ],
+            "totalPaid": 81744.836146418563,
+            "totalBlocks": 351,
+            "lastPoolBlockTime": "2023-03-10T18:07:24.123157Z",
+            "poolEffort": 0.8194357022964941
+        },
+        {
+            "id": "satox-solo",
+            "coin": {
+                "type": "SATOX",
+                "name": "SatoxCoin-SOLO",
+                "symbol": "SATOX",
+                "website": "https://www.satoverse.io/",
+                "market": "https://txbit.io/Trade/SATOX/USDT",
+                "family": "ravencoin",
+                "algorithm": "KawPow",
+                "twitter": "https://twitter.com/Satoverse_io",
+                "discord": "https://discord.com/invite/GFZYFuuHVq",
+                "telegram": "",
+                "canonicalName": "SatoxCoin-SOLO"
+            },
+            "ports": {
+                "11003": {
+                    "listenAddress": "*",
+                    "name": "GPU and NiceHash SOLO",
+                    "difficulty": 0.5,
+                    "varDiff": {
+                        "minDiff": 0.5,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 10,
+                "payoutScheme": "SOLO",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {}
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "Sjr7rqDQ38D3iTj3UgAeCmsUc6SD5euSB8",
+            "addressInfoLink": "https://xplore.satoverse.io/address/Sjr7rqDQ38D3iTj3UgAeCmsUc6SD5euSB8",
+            "poolStats": {
+                "connectedMiners": 0,
+                "poolHashrate": 0,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "Main",
+                "networkHashrate": 2919801363.214614,
+                "networkDifficulty": 41.749101659317,
+                "nextNetworkTarget": "000000000621bc00000000000000000000000000000000000000000000000000",
+                "nextNetworkBits": "1c0621bc",
+                "lastNetworkBlockTime": "2023-03-10T19:11:01.8395623Z",
+                "blockHeight": 80484,
+                "connectedPeers": 10,
+                "rewardType": "POW"
+            },
+            "topMiners": [],
+            "totalPaid": 712.811090544300,
+            "totalBlocks": 3,
+            "lastPoolBlockTime": "2023-03-05T10:53:43.315763Z",
+            "poolEffort": 0
+        },
+        {
+            "id": "paprika",
+            "coin": {
+                "type": "PAPRY",
+                "name": "PaprikaCoin",
+                "symbol": "PAPRY",
+                "website": "https://paprikacoin.paprikaex.com/",
+                "market": "https://xeggex.com/market/PAPRY_USDT",
+                "family": "ravencoin",
+                "algorithm": "KawPow",
+                "twitter": "https://twitter.com/paprikaex",
+                "discord": "https://discord.com/invite/jgrXwraV65",
+                "telegram": "",
+                "canonicalName": "PaprikaCoin"
+            },
+            "ports": {
+                "10005": {
+                    "listenAddress": "*",
+                    "name": "GPU and NiceHash",
+                    "difficulty": 0.5,
+                    "varDiff": {
+                        "minDiff": 0.5,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 100,
+                "payoutScheme": "PPLNS",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {}
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "9S15TzguV6Nc9Ln4eSg5FaRCYhpmxdcVyn",
+            "addressInfoLink": "https://explorer.paprikaex.com/address/9S15TzguV6Nc9Ln4eSg5FaRCYhpmxdcVyn",
+            "poolStats": {
+                "connectedMiners": 7,
+                "poolHashrate": 1720016768,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "Main",
+                "networkHashrate": 52870598685.20995,
+                "networkDifficulty": 693.850912180374,
+                "nextNetworkTarget": "00000000005e737d000000000000000000000000000000000000000000000000",
+                "nextNetworkBits": "1b5e737d",
+                "lastNetworkBlockTime": "2023-03-10T19:11:08.0874041Z",
+                "blockHeight": 29291,
+                "connectedPeers": 12,
+                "rewardType": "POW"
+            },
+            "topMiners": [
+                {
+                    "miner": "9KTJesYzkAEjv1LMkYt4B21btSo1jP8aE7",
+                    "hashrate": 1105017587,
+                    "sharesPerSecond": 0.34400000000000003
+                },
+                {
+                    "miner": "9DteSsee5mseMCK9mPy8F7Gf6yPQ8uUbGR",
+                    "hashrate": 491436089,
+                    "sharesPerSecond": 0.154
+                },
+                {
+                    "miner": "9GqeQuRSRwTSNz6bRHYhBbJ4YeYJdYjiXA",
+                    "hashrate": 262747831,
+                    "sharesPerSecond": 0.058
+                },
+                {
+                    "miner": "94k4wgWxaSgwtUKEXYCbNhPabcft8PiVhC",
+                    "hashrate": 196852666,
+                    "sharesPerSecond": 0.092
+                },
+                {
+                    "miner": "9RDrv8NFmbf99MZkiiYJLSy2JbuFtQ5uvB",
+                    "hashrate": 191082097,
+                    "sharesPerSecond": 0.063
+                },
+                {
+                    "miner": "9FdsJ86BLFiqmUeCY783unKwwzi6441t4c",
+                    "hashrate": 138547332,
+                    "sharesPerSecond": 0.065
+                },
+                {
+                    "miner": "9JDih5nrNprrmguCFn4sJL977BuTgMEEK4",
+                    "hashrate": 129171948,
+                    "sharesPerSecond": 0.06
+                },
+                {
+                    "miner": "9BEATooYBqLZcjc3WRSzkAzrfuZibTH2Vy",
+                    "hashrate": 125325624,
+                    "sharesPerSecond": 0.021
+                },
+                {
+                    "miner": "9EhCJq4dKjBKhscnfQhvPdU4f9Qad66CsA",
+                    "hashrate": 61356675,
+                    "sharesPerSecond": 0.029
+                },
+                {
+                    "miner": "9F3ZKVc8SPEKsUKeGgrs8hDvxmyet2c1Sv",
+                    "hashrate": 11976235,
+                    "sharesPerSecond": 0.006
+                }
+            ],
+            "totalPaid": 18443.427038329505,
+            "totalBlocks": 786,
+            "lastPoolBlockTime": "2023-03-10T18:57:12.93848Z",
+            "poolEffort": 0.4738897605230894
+        },
+        {
+            "id": "paprika-solo",
+            "coin": {
+                "type": "PAPRY",
+                "name": "PaprikaCoin-SOLO",
+                "symbol": "PAPRY",
+                "website": "https://paprikacoin.paprikaex.com/",
+                "market": "https://xeggex.com/market/PAPRY_USDT",
+                "family": "ravencoin",
+                "algorithm": "KawPow",
+                "twitter": "https://twitter.com/paprikaex",
+                "discord": "https://discord.com/invite/jgrXwraV65",
+                "telegram": "",
+                "canonicalName": "PaprikaCoin-SOLO"
+            },
+            "ports": {
+                "11005": {
+                    "listenAddress": "*",
+                    "name": "GPU and NiceHash SOLO",
+                    "difficulty": 0.5,
+                    "varDiff": {
+                        "minDiff": 0.5,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 100,
+                "payoutScheme": "SOLO",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {}
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "9S15TzguV6Nc9Ln4eSg5FaRCYhpmxdcVyn",
+            "addressInfoLink": "https://explorer.paprikaex.com/address/9S15TzguV6Nc9Ln4eSg5FaRCYhpmxdcVyn",
+            "poolStats": {
+                "connectedMiners": 1,
+                "poolHashrate": 1187180032,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "Main",
+                "networkHashrate": 52870598685.20995,
+                "networkDifficulty": 693.850912180374,
+                "nextNetworkTarget": "00000000005e737d000000000000000000000000000000000000000000000000",
+                "nextNetworkBits": "1b5e737d",
+                "lastNetworkBlockTime": "2023-03-10T19:11:08.0879156Z",
+                "blockHeight": 29291,
+                "connectedPeers": 12,
+                "rewardType": "POW"
+            },
+            "topMiners": [
+                {
+                    "miner": "9LJ7cMrDnUi4MkcdMesg9zQDQDAHrwn5bu",
+                    "hashrate": 1562798331,
+                    "sharesPerSecond": 0.429
+                }
+            ],
+            "totalPaid": 4242.633015881700,
+            "totalBlocks": 123,
+            "lastPoolBlockTime": "2023-03-10T16:13:26.330496Z",
+            "poolEffort": 1.6786922470516916
+        },
+        {
+            "id": "skydoge",
+            "coin": {
+                "type": "SKYDOGE",
+                "name": "Skydoge",
+                "symbol": "SKYDOGE",
+                "website": "",
+                "market": "",
+                "family": "bitcoin",
+                "algorithm": "Skydoge",
+                "twitter": "",
+                "discord": "",
+                "telegram": "",
+                "canonicalName": "Skydoge"
+            },
+            "ports": {
+                "10002": {
+                    "listenAddress": "*",
+                    "name": "GPU",
+                    "difficulty": 0.1,
+                    "varDiff": {
+                        "minDiff": 0.1,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 100,
+                "payoutScheme": "PPLNS",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {}
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "17GoCB5R8yfVC62uxQhz5p3yz9R7mtQGr5",
+            "addressInfoLink": "https://explorer.skydogepool.xyz/address/17GoCB5R8yfVC62uxQhz5p3yz9R7mtQGr5",
+            "poolStats": {
+                "connectedMiners": 0,
+                "poolHashrate": 0,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "Main",
+                "networkHashrate": 113656396012.8456,
+                "networkDifficulty": 1891.173263174117,
+                "nextNetworkTarget": "000000000022a731000000000000000000000000000000000000000000000000",
+                "nextNetworkBits": "1b22a731",
+                "lastNetworkBlockTime": "2023-03-10T19:10:28.9256816Z",
+                "blockHeight": 124834,
+                "connectedPeers": 10,
+                "rewardType": "POW"
+            },
+            "topMiners": [],
+            "totalPaid": 0,
+            "totalBlocks": 7,
+            "lastPoolBlockTime": "2023-03-06T07:35:56.140008Z",
+            "poolEffort": 1.8389555575017147
+        },
+        {
+            "id": "skydoge-solo",
+            "coin": {
+                "type": "SKYDOGE",
+                "name": "Skydoge-SOLO",
+                "symbol": "SKYDOGE",
+                "website": "",
+                "market": "",
+                "family": "bitcoin",
+                "algorithm": "Skydoge",
+                "twitter": "",
+                "discord": "",
+                "telegram": "",
+                "canonicalName": "Skydoge-SOLO"
+            },
+            "ports": {
+                "11002": {
+                    "listenAddress": "*",
+                    "name": "GPU",
+                    "difficulty": 0.1,
+                    "varDiff": {
+                        "minDiff": 0.1,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    },
+                    "tls": false,
+                    "tlsAuto": false
+                }
+            },
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 100,
+                "payoutScheme": "SOLO",
+                "payoutSchemeConfig": [
+                    [
+                        []
+                    ]
+                ],
+                "extra": {}
+            },
+            "clientConnectionTimeout": 600,
+            "jobRebroadcastTimeout": 0,
+            "blockRefreshInterval": 120,
+            "poolFeePercent": 1,
+            "address": "17GoCB5R8yfVC62uxQhz5p3yz9R7mtQGr5",
+            "addressInfoLink": "https://explorer.skydogepool.xyz/address/17GoCB5R8yfVC62uxQhz5p3yz9R7mtQGr5",
+            "poolStats": {
+                "connectedMiners": 0,
+                "poolHashrate": 0,
+                "sharesPerSecond": 0
+            },
+            "networkStats": {
+                "networkType": "Main",
+                "networkHashrate": 113656396012.8456,
+                "networkDifficulty": 1891.173263174117,
+                "nextNetworkTarget": "000000000022a731000000000000000000000000000000000000000000000000",
+                "nextNetworkBits": "1b22a731",
+                "lastNetworkBlockTime": "2023-03-10T19:10:28.9258089Z",
+                "blockHeight": 124834,
+                "connectedPeers": 10,
+                "rewardType": "POW"
+            },
+            "topMiners": [],
+            "totalPaid": 0,
+            "totalBlocks": 1,
+            "lastPoolBlockTime": "2023-03-06T12:49:22.116614Z",
+            "poolEffort": 0
+        }
+    ]
+}

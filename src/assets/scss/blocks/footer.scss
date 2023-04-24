@@ -1,0 +1,245 @@
+/* Block - footer */
+
+.footer {
+  width: 100%;
+  padding-bottom: 3rem;
+
+  &__inner {
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem;
+
+    @include breakpoint($screen-768) {
+      max-width: 768px;
+      padding: 4rem;
+    }
+
+    @include breakpoint($screen-740) {
+      max-width: 740px;
+      padding: 3rem;
+    }
+
+    @include breakpoint($screen-667) {
+      padding: 3rem;
+    }
+
+    @include breakpoint($screen-414) {
+      flex-direction: column;
+      align-items: center;
+      max-width: 414px;
+    }
+
+    @include breakpoint($screen-393) {
+      flex-direction: column;
+      align-items: center;
+      max-width: 393px;
+    }
+
+    @include breakpoint($screen-390) {
+      flex-direction: column;
+      align-items: center;
+      max-width: 390px;
+    }
+
+    @include breakpoint($screen-375) {
+      flex-direction: column;
+      align-items: center;
+      max-width: 375px;
+    }
+
+    @include breakpoint($screen-360) {
+      max-width: 360px;
+    }
+  }
+
+  &__menu {
+    margin-right: 5rem;
+    margin-bottom: 1rem;
+
+    @include breakpoint($screen-1280) {
+      margin-right: 5.6rem;
+    }
+
+    @include breakpoint($screen-844) {
+      margin-right: 3rem;
+    }
+
+
+    @include breakpoint($screen-667) {
+      margin-right: 3rem;
+    }
+
+    @include breakpoint($screen-414) {
+      margin-right: 0;
+    }
+
+    @include breakpoint($screen-375) {
+      margin-right: 0;
+    }
+  }
+
+  &__menu-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.9rem;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #181818;
+
+    @include breakpoint($screen-740) {
+      text-align: center;
+    }
+
+    @include breakpoint($screen-667) {
+      text-align: center;
+    }
+
+    @include breakpoint($screen-414) {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    @include breakpoint($screen-375) {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+
+  &__menu-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint($screen-667) {
+      flex-direction: column;
+    }
+
+    @include breakpoint($screen-414) {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    @include breakpoint($screen-375) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  &__menu-item {
+    margin: 1rem;
+
+
+    @include breakpoint($iphone-xr-rotate-bp) {
+      margin: 0.5rem 1rem;
+    }
+
+    @include breakpoint($ipad-bp) {
+      margin: 0.5rem 1rem;
+    }
+
+    @include breakpoint($iphone6-rotate-bp) {
+      margin: 0.5rem 2rem;
+    }
+
+    @include breakpoint($screen-375) {
+      margin: 0.5rem 1rem;
+    }
+  }
+
+  &__menu-link {
+    line-height: 1.4rem;
+    color: #767676;
+    text-decoration: none;
+    position: relative;
+    transition-duration: .4s;
+
+    &--socials {
+      padding-left: 1.5rem;
+    }
+
+    &:hover {
+      color: $orange;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px dotted $orange;
+
+      &.footer__menu-link--ds:before {
+        background: url('../img/socials/footer-ds-hover.svg') no-repeat;
+      }
+
+      &.footer__menu-link--tg:before {
+        background: url('../img/socials/footer-tg-hover.svg') no-repeat;
+      }
+
+      &.footer__menu-link--yt:before {
+        background: url('../img/socials/footer-yt-hover.svg') no-repeat;
+      }
+
+    }
+
+    &:active {
+      color: #fff;
+      border-bottom: 1px solid #ccc;
+    }
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 100%;
+      position: absolute;
+      top: 4px;
+      left: 0;
+    }
+
+    &--ds::before {
+      background: url('../img/socials/footer-ds.svg') no-repeat;
+    }
+
+    &--tg::before {
+      background: url('../img/socials/footer-tg.svg') no-repeat;
+    }
+
+    &--yt::before {
+      background: url('../img/socials/footer-yt.svg') no-repeat;
+    }
+  }
+
+  &__copyright {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: #767676;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3rem;
+
+    @include breakpoint($screen-667) {
+      max-width: 667px;
+    }
+
+    @include breakpoint($screen-414) {
+      max-width: 414px;
+    }
+  }
+
+  &__copyright-main {
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  &__contact-link,
+  &__copyright-link {
+    text-decoration: none;
+    color: $orange;
+
+    transition-duration: .3s;
+
+    &:hover {
+      color: lighten($orange, 20%)
+    }
+  }
+
+}
+
+/* end Block - footer */

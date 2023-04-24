@@ -1,0 +1,454 @@
+/* Block - sidebar */
+
+.sidebar-coin {
+  width: $sidebar-width;
+  height: 100%;
+  background-color: $primary;
+  box-shadow: 5px 0 15px rgba(#050505, .1);
+  z-index: $z-index-sidebar;
+  overflow: scroll;
+
+  @include breakpoint($screen-1600) {
+    width: 31rem;
+  }
+
+  @include breakpoint($screen-1465) {
+    width: 31rem;
+  }
+
+  @include breakpoint($screen-1440) {
+    width: 31rem;
+  }
+
+  @include breakpoint($screen-1435) {
+    width: 30rem;
+  }
+
+  @include breakpoint($screen-1300) {
+    @include hide-sidebar-on-mobile(none)
+  }
+
+  @include breakpoint($screen-1280) {
+    @include hide-sidebar-on-mobile(none)
+  }
+
+  @include breakpoint($screen-950) {
+    @include hide-sidebar-on-mobile(none)
+  }
+
+  @include breakpoint($screen-800) {
+    @include hide-sidebar-on-mobile(none)
+  }
+
+  @include breakpoint($screen-650) {
+    @include hide-sidebar-on-mobile(none)
+  }
+
+  @include breakpoint($screen-375) {
+    @include hide-sidebar-on-mobile(none)
+  }
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0;
+    display: none !important;
+    background: transparent;
+  }
+
+
+  &__content {
+    padding: 0 2rem;
+    margin-top: 2.5rem;
+  }
+
+  &__pool {
+    display: block;
+    text-align: center;
+  }
+
+  &__pool-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+  }
+
+  &__pool-desc {
+    color: $orange;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  &__block-title {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    background-color: $secondary;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+  }
+
+  &__block-text {
+    color: $orange;
+  }
+
+  &__info-btn {
+    display: block;
+    background-color: $orange;
+    border: 0;
+    color: $secondary;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 1rem 4rem;
+    border-radius: 10px;
+
+    transition-duration: .2s;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+
+  &__info-connect-area {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info-connect-list {
+    background-color: #202020;
+    padding: 1rem;
+    border-radius: 10px;
+
+    &--invisible {
+      display: none;
+    }
+  }
+
+  &__info-connect-item {
+    background-color: $secondary;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    word-break: break-all;
+
+    &--poolWallet {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__info-connect-item--left {
+    font-weight: 700;
+    color: rgba(#ccc, 50%);
+  }
+
+  &__info-connect-item--right {
+    margin-top: 0.5rem;
+  }
+
+  &__info-connect-item--right-code {
+    color: $orange;
+    cursor: pointer;
+  }
+
+
+
+
+  &__info {
+    background-color: $secondary;
+    padding: 1.5rem 1.5rem 0.5rem;
+    margin-top: 2.5rem;
+    border-radius: 5px;
+  }
+
+  &__info-item {
+    display: flex;
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+
+    &:not(:last-child):after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $separator;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  &__info-item--left {
+    width: 45%;
+    display: flex;
+    gap: 1rem;
+
+  }
+
+  &__info-icon {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-top: 3px;
+
+    &--www {
+      background: url("../img/coin-info-icons/www.svg") no-repeat;
+    }
+
+    &--explorer {
+      background: url("../img/coin-info-icons/explorer.svg") no-repeat;
+    }
+
+    &--discord {
+      background: url("../img/coin-info-icons/discord.svg") no-repeat;
+    }
+
+    &--tg {
+      background: url("../img/coin-info-icons/tg.svg") no-repeat;
+    }
+
+    &--twitter {
+      background: url("../img/coin-info-icons/twitter.svg") no-repeat;
+    }
+
+    &--exchanges {
+      background: url("../img/coin-info-icons/exchanges.svg") no-repeat;
+    }
+  }
+
+  &__info-item--right {
+    width: 55%;
+  }
+
+  &__info-item-list {
+    list-style: inside circle;
+  }
+
+  &__info-item-exchange {
+    padding: 0.3rem 0;
+  }
+
+  &__info-link {
+    text-decoration: none;
+    color: #ccc;
+    transition: color .2s linear;
+
+    &:hover {
+      color: darken($orange, 8%);
+      padding-bottom: 0.1rem;
+      border-bottom: 1px dotted $orange;
+    }
+
+    &:active {
+      color: #ccc;
+      border-bottom: 1px dotted #ccc;
+    }
+  }
+
+  &__algo-title {
+    background-color: $orange;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2.5rem;
+    padding: 0.5rem;
+  }
+
+  &__coin-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $secondary;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(#777777, 30%);
+
+    transition: background-color .2s linear;
+
+    &:hover {
+      background-color: #161616;
+      outline: 1px solid rgba($orange, 70%);
+
+    }
+
+    &:active {
+      background-color: darken($primary, 10%);
+      outline: 1px solid #2a2a2a;
+      box-shadow: 0 2px 0 rgba(#777, .3);
+    }
+
+  }
+
+  &__coin-item--left {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__coin-img {
+    max-width: 3.2rem;
+    max-height: 3rem;
+  }
+
+  &__coin-title {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  &__coin-item--right {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  &__coin-props {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__coin-prop {
+    background-color: #2a2a2a;
+    padding: 0.2rem 0.7rem;
+
+    transition-duration: .2s;
+
+    &--link {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: lighten(#2a2a2a, 7%);
+      color: $white;
+    }
+  }
+}
+
+
+
+
+.sidebar-mobile {
+  background-color: $secondary;
+  width: 80%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 4rem;
+  padding: 1.5rem 2rem 0 2rem;
+  box-shadow: 5px 0 15px rgba(#050505, .3);
+  visibility: hidden;
+  z-index: $z-index-sidebar;
+
+  &--container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+
+    @include breakpoint($iphone6-rotate-bp) {
+      flex-direction: column;
+    }
+
+    @include breakpoint($screen-375) {
+      flex-direction: column;
+    }
+  }
+
+  &__list-title {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: #ccc;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-color: #222222;
+      height: 1px;
+      width: 50%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    list-style: initial;
+    color: #2a2a2a;
+  }
+
+  &__list-item {
+    padding: 0 3rem 0 0;
+  }
+
+  &__link {
+    color: #767676;
+    text-decoration: none;
+
+    &:hover {
+      color: lighten($orange, 10%);
+    }
+
+    &:active {
+      color: $orange;
+    }
+  }
+
+  @include breakpoint($screen-1300) {
+    @include show-sidebar-mobile-size(30%, 100%)
+  }
+
+  @include breakpoint($iphone-xr-rotate-bp) {
+    @include show-sidebar-mobile-size(40%, 100%)
+  }
+
+  @include breakpoint($iphone12-rotate-bp) {
+    @include show-sidebar-mobile-size(35%, 100%)
+  }
+
+  @include breakpoint($realme-bp) {
+    @include show-sidebar-mobile-size(100%, 30%)
+  }
+
+  @include breakpoint($ipad-bp) {
+    @include show-sidebar-mobile-size(100%, 30%)
+  }
+
+  @include breakpoint($iphone6-rotate-bp) {
+    @include show-sidebar-mobile-size(60%, 100%)
+  }
+
+  @include breakpoint($surface-bp) {
+    @include show-sidebar-mobile-size(55%, 100%)
+  }
+
+  @include breakpoint($iphone-xr-bp) {
+    @include show-sidebar-mobile-size(100%, 60%)
+  }
+
+  @include breakpoint($screen-375) {
+    @include show-sidebar-mobile-size(100%, 60%)
+  }
+
+}
+
+/* end Block - sidebar */

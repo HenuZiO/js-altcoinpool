@@ -1,0 +1,281 @@
+.stat-tabs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+
+  &__row {
+    width: 100%;
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    gap: 4.5rem;
+    padding: 2rem;
+
+    @include breakpoint($screen-851) {
+      max-width: 811px;
+      width: 100%;
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+
+    @include breakpoint($screen-844) {
+      max-width: 804px;
+      width: 100%;
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+
+    @include breakpoint($screen-820) {
+      max-width: 780px;
+      width: 100%;
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+
+    @include breakpoint($screen-800) {
+      max-width: 760px;
+      width: 100%;
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+
+    @include breakpoint($screen-740) {
+      max-width: 700px;
+      width: 100%;
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+
+    @include breakpoint($screen-667) {
+      max-width: 627px;
+      width: 100%;
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+
+    @include breakpoint($screen-414) {
+      max-width: 374px;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    @include breakpoint($screen-393) {
+      max-width: 353px;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    @include breakpoint($screen-390) {
+      max-width: 350px;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    @include breakpoint($screen-375) {
+      max-width: 335px;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    @include breakpoint($screen-360) {
+      max-width: 320px;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+  }
+
+  &__btn {
+    display: block;
+    background-color: lighten($secondary, 5%);
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    padding: 1rem 4.3rem;
+    border: none;
+    border-radius: 10px;
+    transition-duration: .3s;
+    text-transform: uppercase;
+
+    @include breakpoint($screen-740) {
+      width: 30%;
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+    }
+
+    @include breakpoint($screen-667) {
+      width: 30%;
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+    }
+
+    @include breakpoint($screen-414) {
+      width: 90%;
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+    }
+
+    @include breakpoint($screen-375) {
+      width: 90%;
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+    }
+
+    &:hover {
+      background-color: $orange;
+    }
+
+    &:active {
+      background-color: darken($orange, 10%);
+    }
+  }
+
+  &__btn--active {
+    background-color: $orange;
+  }
+
+  &__content {
+    margin-top: 3rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content-item {
+    display: none;
+  }
+
+  &__content-item--show {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1.5rem;
+    margin-bottom: 2rem;
+    justify-items: center;
+  }
+
+  &__content-text {
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    &--form,
+    &--formbar {
+      display: block;
+      width: 100%;
+      background-color: #2a2a2a;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    &--form {
+      max-width: 90px;
+    }
+
+    &--formbar {
+      max-width: 140px;
+    }
+
+    &--form-active,
+    &--formbar-full {
+      background-color: $orange;
+    }
+  }
+}
+
+
+.tabs_mobile {
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $secondary;
+    padding: 1rem;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px dashed rgba(#ccc, 0.2)
+  }
+
+  &__item--show {
+    display: flex;
+  }
+
+  &__definitions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  &__definition-item {
+    background-color: lighten($secondary, 4%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 5px;
+
+    &--date,
+    &--date2,
+    &--amount,
+    &--address,
+    &--transurl,
+    &--transid,
+    &--blockH,
+    &--miner,
+    &--effort,
+    &--status,
+    &--reward,
+    &--confirmations {
+      width: 100%;
+    }
+
+    &--blockH,
+    &--date2,
+    &--effort,
+    &--status,
+    &--reward,
+    &--confirmations {
+      width: 48%;
+    }
+
+    &--transid {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__term {
+    font-size: 1.1rem;
+    color: lighten($separator, 10%);
+  }
+
+  &__definition {
+    font-size: 1.3rem;
+    color: #ccc;
+    word-break: break-all;
+  }
+
+  &__item-link {
+    text-decoration: none;
+    color: $orange;
+
+    transition-duration: .2s;
+
+    &:hover {
+      color: darken($orange, 8%);
+      padding-bottom: 0.1rem;
+      border-bottom: 1px dotted $orange;
+    }
+
+    &:active {
+      color: #ccc;
+      border-bottom: 1px dotted #ccc;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    {{> head }}
+  </head>
+
+  <body>
+    <div class="page" id="page" onhashchange="getProjectData()">
+      <!-- Sidebar -->
+      <div class="div1">{{> sidebar}}</div>
+
+      <!-- Header -->
+      <div class="div2">{{> header }}</div>
+
+      <!-- Main Content  -->
+      <main class="main">{{> body }}</main>
+
+      <!-- Footer -->
+      <div class="div4">{{> footer}}</div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script defer type="text/javascript">
+      $(document).ready(function () {
+        getProjectData();
+      });
+    </script>
+  </body>
+</html>

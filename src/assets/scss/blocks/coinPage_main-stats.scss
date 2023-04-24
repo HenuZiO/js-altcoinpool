@@ -1,0 +1,180 @@
+.main-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+
+  @include breakpoint($screen-1500) {
+    gap: 2rem;
+  }
+
+  @include breakpoint($screen-1435) {
+    gap: 2rem;
+  }
+
+  @include breakpoint($screen-990) {
+    gap: 1.5rem;
+  }
+
+  @include breakpoint($screen-851) {
+    flex-direction: row;
+    max-width: 811px;
+  }
+
+  @include breakpoint($screen-844) {
+    flex-direction: row;
+    max-width: 804px;
+    width: 100%;
+  }
+
+  @include breakpoint($screen-820) {
+    flex-direction: row;
+    max-width: 780px;
+  }
+
+  @include breakpoint($screen-800) {
+    max-width: 760px;
+  }
+
+  @include breakpoint($screen-740) {
+    flex-direction: row;
+    max-width: 700px;
+  }
+
+  @include breakpoint($screen-667) {
+    flex-direction: row;
+    max-width: 627px;
+  }
+
+  @include breakpoint($screen-500) {
+    flex-direction: row;
+    max-width: 460px;
+  }
+
+  @include breakpoint($screen-414) {
+    flex-direction: row;
+    max-width: 374px;
+  }
+
+  @include breakpoint($screen-393) {
+    max-width: 353px;
+  }
+
+  @include breakpoint($screen-390) {
+    max-width: 350px;
+  }
+
+  @include breakpoint($screen-360) {
+    max-width: 320px;
+  }
+
+
+  &__item {
+    flex: 1 0 auto;
+    background-color: $secondary;
+    border-radius: 5px;
+
+    @include breakpoint($screen-875) {
+      width: 405px;
+      min-width: 300px;
+
+    }
+
+    @include breakpoint($screen-851) {
+      width: 250px;
+    }
+
+    @include breakpoint($screen-844) {}
+
+    @include breakpoint($screen-820) {
+      width: 250px;
+    }
+
+    @include breakpoint($screen-800) {
+      width: 370px;
+    }
+
+    @include breakpoint($screen-650) {
+      width: 100%;
+    }
+
+    @include breakpoint($screen-500) {}
+
+    @include breakpoint($screen-393) {
+      width: 100%;
+    }
+
+    @include breakpoint($screen-375) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    display: flex;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 rgba($orange, .7);
+
+    @include breakpoint($screen-990) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__title-type {
+    &::after {
+      content: "|";
+      padding: 0 1rem;
+    }
+  }
+
+  &__title-coin {
+    color: $orange;
+  }
+
+  &__info {
+    padding: 2rem;
+    font-size: 1.2rem;
+
+    @include breakpoint($screen-990) {
+      padding: 2rem 1rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list-item {
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 0.8rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    gap: 1rem;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__span-left {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+    &::after {
+      content: "|";
+      color: #2a2a2a;
+      padding-left: 1rem;
+    }
+  }
+
+  &__span-right {
+    width: 50%;
+  }
+}

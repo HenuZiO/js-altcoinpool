@@ -1,0 +1,97 @@
+@import 'vendor/reset';
+@import 'vars';
+@import 'mixins';
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #181818;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  color: $white;
+  line-height: 1.4;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+
+  @include breakpoint($screen-1300) {
+    @include no-scroll;
+  }
+
+  @include breakpoint($iphone-xr-rotate-bp) {
+    @include no-scroll;
+  }
+
+  @include breakpoint($iphone12-rotate-bp) {
+    @include no-scroll;
+  }
+
+  @include breakpoint($ipad-bp) {
+    @include no-scroll;
+  }
+
+  @include breakpoint($iphone6-rotate-bp) {
+    @include no-scroll;
+  }
+
+  @include breakpoint($surface-bp) {
+    @include no-scroll;
+  }
+
+  @include breakpoint($iphone-xr-bp) {
+    @include no-scroll;
+  }
+
+  @include breakpoint($screen-375) {
+    @include no-scroll;
+  }
+
+  @include breakpoint($fold-bp) {
+    @include no-scroll;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.add_mb {
+  margin-bottom: 10rem;
+}
+
+@import 'blocks/sidebar';
+@import 'blocks/main';
+@import 'blocks/header';
+@import 'blocks/filters';
+@import 'blocks/coin-sort';
+@import 'blocks/coin-item';
+@import 'blocks/coinPage_main-stats';
+@import 'blocks/coinPage_additional-stats';
+@import 'blocks/coinPage_miner-hashrate';
+@import 'blocks/coinPage_coin-tabs';
+@import 'blocks/sidebar-coin';
+@import 'blocks/footer';
+@import 'blocks/scrollbar';
+@import 'blocks/charlist';

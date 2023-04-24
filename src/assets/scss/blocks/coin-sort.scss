@@ -1,0 +1,123 @@
+/* Block - coin-sort */
+.coin-sort {
+  background-color: $secondary;
+  display: flex;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  padding: 1.5rem 3rem;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 rgba($orange, .7);
+
+  &__container {
+    width: 100%;
+
+    @include breakpoint($screen-667) {
+      max-width: 627px;
+    }
+
+    @include breakpoint($screen-414) {
+      max-width: 374px;
+    }
+  }
+
+
+  &__position {
+    width: 100%;
+  }
+
+  &__left {
+    width: 50%;
+  }
+
+  &__right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+  }
+
+  &__unlink {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    color: rgba($white, .7);
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding-left: 2rem;
+    position: relative;
+
+    &:not(:first-child):before {
+      content: "•";
+      color: rgba($white, 0.5);
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      top: 1px;
+      left: 8px;
+    }
+  }
+
+  &__item-link {
+    color: rgba($white, .5);
+    text-decoration: none;
+    transition-duration: .3s;
+
+    &:hover {
+      color: rgba($orange, 0.7)
+    }
+
+    &:active {
+      color: $orange;
+    }
+  }
+}
+
+.coin-sort {
+
+  &__container {
+    width: 100%;
+  }
+}
+
+.search-result {
+
+  background-color: $secondary;
+  display: flex;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  padding: 1.5rem 3rem;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 rgba($orange, .7);
+
+
+  &__container {
+    width: 100%;
+
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.7rem;
+  }
+
+  &__hidden-msg {
+    width: 100%;
+    font-size: 2.2rem;
+    color: #CCC;
+    text-align: center;
+  }
+}
+
+/* end Block - coin-sort */

@@ -1,0 +1,144 @@
+/* Block - filters */
+
+.filters {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @include breakpoint($screen-800) {
+    max-width: 760px;
+    width: 100%;
+  }
+
+  @include breakpoint($screen-740) {
+    max-width: 680px;
+    width: 100%;
+  }
+
+  @include breakpoint($screen-667) {
+    max-width: 627px;
+    width: 100%;
+  }
+
+  @include breakpoint($screen-414) {
+    max-width: 374px;
+    flex-direction: column;
+  }
+
+  @include breakpoint($screen-393) {
+    max-width: 353px;
+    flex-direction: column;
+  }
+
+  @include breakpoint($screen-390) {
+    max-width: 350px;
+    flex-direction: column;
+  }
+
+  @include breakpoint($screen-375) {
+    flex-direction: column;
+  }
+
+  @include breakpoint($screen-360) {
+    max-width: 320px;
+  }
+
+  &__item {
+    width: 350px;
+    margin-left: 2rem;
+    box-shadow: 0 15px 25px rgba(#000, .45);
+    display: flex;
+    position: relative;
+
+    @include breakpoint($screen-667) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      width: 100%;
+      box-shadow: 0 5px 15px rgba(#000, .25);
+    }
+
+    @include breakpoint($screen-414) {
+      width: 100%;
+      margin: 1rem 0;
+      box-shadow: 0 5px 15px rgba(#000, .25);
+    }
+
+    @include breakpoint($screen-375) {
+      width: 100%;
+      margin: 1rem 0;
+      box-shadow: 0 5px 15px rgba(#000, .25);
+    }
+  }
+
+  &__search-form {
+    width: 100%;
+    background-color: $secondary;
+    border-radius: 5px;
+  }
+
+  &__search-input {
+    width: 100%;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #ccc;
+    padding: 1.8rem 5rem 1.8rem 1.5rem;
+    border: none;
+    transition: background-color linear .2s;
+
+    @include breakpoint($screen-375) {
+      font-size: 1.1rem;
+    }
+
+    &--addpadding {
+      padding-left: 5rem;
+    }
+
+    &::placeholder {
+      color: rgba($white, .4);
+    }
+
+    &:focus {
+      background-color: lighten($secondary, 3%);
+      color: rgba($white, .6);
+      border-radius: 5px;
+    }
+  }
+
+  &__btn-list,
+  &__btn-search {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 1.5rem;
+  }
+
+  &__btn-list {
+    background: transparent;
+    left: 1.5rem;
+    border: 1px solid #2B2B2B;
+  }
+
+  &__btn-search {
+    background: #2a2a2a;
+    right: 1.5rem;
+    border: none;
+    border-radius: 3px;
+
+
+    &::after {
+      content: "";
+      display: inline-block;
+      background-image: url("../img/filter-search.svg");
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      left: 10%;
+      top: 30%;
+    }
+  }
+}
+
+/* end Block - filters */
