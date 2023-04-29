@@ -4,272 +4,275 @@ title: Mining Pool • Altcoinpool.ru
 ---
 
 <div class="main-index">
-  <div class="filters">
-    <!-- п.3 TODO LIST -->
-    <!-- <div class="filters__item">
-      <select class="filters__btn-list" type="button">
-        <option value="#1">Altcoinchain (ALT)</option>
-        <option value="#2">BlackChain (BLACK)</option>
-        <option value="#3">FloraChain (FLORA)</option>
-        <option value="#4">AVES (AVES)</option>
-      </select>
-      <form class="filters__search-form" action="/" method="post">
-        <input
-          class="filters__search-input filters__search-input--addpadding"
-          type="text"
-          placeholder="Enter your wallet address..."
-        />
-        <button class="filters__btn-search" type="button"></button>
-      </form>
-    </div> -->
-    <!-- end п.3 TODO LIST -->
+	<div class="filters">
+		<div class="filters__item">
+			<form class="filters__search-form">
+				<input
+					id="liveSearch"
+					class="filters__search-input"
+					type="text"
+					placeholder="Typing the name of the coin..."
+				/>
+				<button class="filters__btn-search" type="button"></button>
+			</form>
+		</div>
+	</div>
 
-    <div class="filters__item">
-      <form class="filters__search-form">
-        <input
-          id="liveSearch"
-          class="filters__search-input"
-          type="text"
-          placeholder="Typing the name of the coin..."
-        />
-        <button class="filters__btn-search" type="button"></button>
-      </form>
-    </div>
-  </div>
+	<div class="search-result__container hide">
+		<section class="search-result">
+			<div class="search-result__left">
+				<h4 class="search-result__title">
+					<span class="text-orange">Searching</span> result...
+				</h4>
+			</div>
+		</section>
+	</div>
 
-  <div class="search-result__container hide">
-    <section class="search-result">
-      <div class="search-result__left">
-        <h4 class="search-result__title"><span class="text-orange">Searching</span> result...</h4>
-      </div>
-    </section>
-  </div>
+	<div class="algoCoinsBlock"></div>
 
-  <div class="algoCoinsBlock"></div>
-
-  <div class="search-result__hidden-msg hide">
-    <p>
-      Sorry, but we didn't find anything. It is possible that such a coin or algorithm does not yet
-      exist, or an error was made in the entered request.
-    </p>
-  </div>
-
-  <!-- One coin item  -->
-  <!-- <section class="coin-item">
-    <div class="coin-item__top-inner">
-        <img class="coin-item__top-img" src="assets/img/coins/coin-altcoin.jpg" alt="">
-        <h3 class="coin-item__top-title">AltcoinChain (ALT)</h3>
-    </div>
-    <div class="coin-item__main">
-        <ul class="coin-item__main-list">
-            <li class="coin-item__main-item">
-                <span>Algorithm</span>
-                <span class="coin-item__main-item&#45;&#45;right">Ethash</span>
-            </li>
-            <li class="coin-item__main-item">
-                <span>Miners</span>
-                <span class="coin-item__main-item&#45;&#45;right">250</span>
-            </li>
-            <li class="coin-item__main-item">
-                <span>Pool H/s</span>
-                <span class="coin-item__main-item&#45;&#45;right">30.62 Gh/s</span>
-            </li>
-            <li class="coin-item__main-item">
-                <span>Network H/s</span>
-                <span class="coin-item__main-item&#45;&#45;right">168.15 Gh/s</span>
-            </li>
-            <li class="coin-item__main-item">
-                <span>Network diff.</span>
-                <span class="coin-item__main-item&#45;&#45;right">423.72844 G</span>
-            </li>
-            <li class="coin-item__main-item">
-                <span>Price</span>
-                <span class="coin-item__main-item&#45;&#45;right">$0.00756</span>
-            </li>
-            <li class="coin-item__main-item">
-                <span>Status</span>
-                <span class="coin-item__main-item&#45;&#45;right">Online</span>
-            </li>
-        </ul>
-    </div>
-</section>  -->
+	<div class="search-result__hidden-msg hide">
+		<p>
+			Sorry, but we didn't find anything. It is possible that such a coin or
+			algorithm does not yet exist, or an error was made in the entered request.
+		</p>
+	</div>
 </div>
 
 <div class="page-dashboard">
-  <div class="filters">
-    <div class="filters__item">
-      <!-- п.3 TODO LIST -->
-      <form id="searchWallet" class="filters__search-form">
-        <input
-          id="searchWallet-input"
-          class="filters__search-input"
-          type="text"
-          placeholder="Enter your wallet address..."
-        />
-        <button
-          id="filters__btn-search--wallet"
-          class="filters__btn-search"
-          type="submit"
-          onclick="searchWalletData()"
-        ></button>
-      </form>
-      <!-- end п.3 TODO LIST -->
-    </div>
-  </div>
+	<div class="filters">
+		<div class="filters__item">
+			<form id="searchWallet" class="filters__search-form">
+				<input
+					id="searchWallet-input"
+					class="filters__search-input"
+					type="text"
+					placeholder="Enter your wallet address..."
+				/>
+				<button
+					id="filters__btn-search--wallet"
+					class="filters__btn-search"
+					type="submit"
+					onclick="searchWalletData()"
+				></button>
+			</form>
+		</div>
+	</div>
 
-  <div class="new-container">
-    <div class="main-stats">
-      <!-- One coin stats box -->
-      <div class="main-stats__item main-stats__item--network"></div>
-      <!-- /One coin stats box -->
+	<div class="new-container">
+		<div class="main-stats">
+			<!-- One coin stats box -->
+			<div class="main-stats__item main-stats__item--network"></div>
+			<!-- /One coin stats box -->
 
-      <!-- One coin stats box -->
-      <div class="main-stats__item main-stats__item--pool"></div>
-      <!-- /One coin stats box -->
+			<!-- One coin stats box -->
+			<div class="main-stats__item main-stats__item--pool"></div>
+			<!-- /One coin stats box -->
 
-      <!-- One coin stats box -->
-      <div class="main-stats__item main-stats__item--miner"></div>
-      <!-- /One coin stats box -->
-    </div>
-    <!-- /main stats inner -->
-  </div>
+			<!-- One coin stats box -->
+			<div class="main-stats__item main-stats__item--miner"></div>
+			<!-- /One coin stats box -->
+		</div>
+		<!-- /main stats inner -->
+	</div>
 
-  <div class="alertMessage"></div>
+	<div class="alertMessage"></div>
 
-  <!-- small stats boxes -->
-  <div class="additional-stats">
-    <!-- small stat item -->
-    <div class="additional-stats__item">
-      <span class="additional-stats__item-title"> Pending Shares </span>
-      <span class="additional-stats__item-text additional-stats__item-text--pending"> </span>
-    </div>
-    <!-- /small stat item -->
-    <!-- small stat item -->
-    <div class="additional-stats__item">
-      <span class="additional-stats__item-title"> Recent found block </span>
-      <span class="additional-stats__item-text additional-stats__item-text--blocks">
-        7 <span class="additional-stats__item-text--little">(pending)</span> | 4628
-        <span class="additional-stats__item-text--little">(confirmed)</span>
-      </span>
-    </div>
-    <!-- /small stat item -->
-    <!-- small stat item -->
-    <div class="additional-stats__item">
-      <span class="additional-stats__item-title"> 24h estimate earning </span>
-      <span class="additional-stats__item-text additional-stats__item-text--esteanings">
-        134 <span class="additional-stats__item-text--little">(coins)</span> | 36
-        <span class="additional-stats__item-text--little">(blocks)</span>
-      </span>
-    </div>
-    <!-- /small stat item -->
-    <!-- small stat item -->
-    <div class="additional-stats__item">
-      <span class="additional-stats__item-title"> Last payment </span>
-      <span class="additional-stats__item-text additional-stats__item-text--payment">
-        8m 19s | 6.056
-      </span>
-    </div>
-    <!-- /small stat item -->
-    <!-- small stat item -->
-    <div class="additional-stats__item">
-      <span class="additional-stats__item-title"> Last payment link </span>
-      <span class="additional-stats__item-text">
-        <a class="additional-stats__item-link additional-stats__item-link--payment" target="_blank">
-          See in explorer
-        </a>
-      </span>
-    </div>
-    <!-- /small stat item -->
-    <!-- small stat item -->
-    <div class="additional-stats__item">
-      <span class="additional-stats__item-title"> Your AVG blocktime </span>
-      <span class="additional-stats__item-text additional-stats__item-text--blocktime"> </span>
-    </div>
-    <!-- /small stat item -->
-  </div>
-  <!-- /small stats boxes -->
+	<!-- small stats boxes -->
+	<div class="additional-stats">
+		<!-- small stat item -->
+		<div class="additional-stats__item">
+			<span class="additional-stats__item-title"> Pending Shares </span>
+			<span
+				class="additional-stats__item-text additional-stats__item-text--pending"
+			>
+				No data
+			</span>
+		</div>
+		<!-- /small stat item -->
+		<!-- small stat item -->
+		<div class="additional-stats__item">
+			<span class="additional-stats__item-title"> Recent found block </span>
+			<span
+				class="additional-stats__item-text additional-stats__item-text--blocks"
+			>
+				No data
+			</span>
+		</div>
+		<!-- /small stat item -->
+		<!-- small stat item -->
+		<div class="additional-stats__item">
+			<span class="additional-stats__item-title"> 24h estimate earning </span>
+			<span
+				class="additional-stats__item-text additional-stats__item-text--esteanings"
+				>No data
+			</span>
+		</div>
+		<!-- /small stat item -->
+		<!-- small stat item -->
+		<div class="additional-stats__item">
+			<span class="additional-stats__item-title"> Last payment </span>
+			<span
+				class="additional-stats__item-text additional-stats__item-text--payment"
+			>
+				No data
+			</span>
+		</div>
+		<!-- /small stat item -->
+		<!-- small stat item -->
+		<div class="additional-stats__item">
+			<span class="additional-stats__item-title"> Last payment link </span>
+			<span class="additional-stats__item-text">
+				<a
+					class="additional-stats__item-link additional-stats__item-link--payment"
+					target="_blank"
+				>
+					No data
+				</a>
+			</span>
+		</div>
+		<!-- /small stat item -->
+		<!-- small stat item -->
+		<div class="additional-stats__item">
+			<span class="additional-stats__item-title"> Your AVG blocktime </span>
+			<span
+				class="additional-stats__item-text additional-stats__item-text--blocktime"
+				>No data
+			</span>
+		</div>
+		<!-- /small stat item -->
+	</div>
+	<!-- /small stats boxes -->
 
-  <!-- hashrate section -->
-  <div class="miners-hash">
-    <div class="miners-hash__left">
-      <!-- hashrate table -->
-      <div class="miners-hash__table">
-        <div class="miners-hash__table-titles">
-          <span class="miners-hash__table-title miners-hash__table-title--number">№</span>
-          <span class="miners-hash__table-title miners-hash__table-title--worker">Worker</span>
-          <span class="miners-hash__table-title miners-hash__table-title--hashrate">Hashrate</span>
-          <span class="miners-hash__table-title miners-hash__table-title--shares">Share Rate</span>
-        </div>
-        <div class="miners-hash__table-content">
-          <!-- hashrate table line-->
+	<!-- hashrate section -->
+	<div class="miners-hash">
+		<div class="miners-hash__left">
+			<!-- hashrate table -->
+			<div class="miners-hash__table">
+				<div class="miners-hash__table-titles">
+					<span
+						class="miners-hash__table-title miners-hash__table-title--number"
+						>№</span
+					>
+					<span
+						class="miners-hash__table-title miners-hash__table-title--worker"
+						>Worker</span
+					>
+					<span
+						class="miners-hash__table-title miners-hash__table-title--hashrate"
+						>Hashrate</span
+					>
+					<span
+						class="miners-hash__table-title miners-hash__table-title--shares"
+						>Share Rate</span
+					>
+				</div>
+				<div class="miners-hash__table-content">
+					<!-- hashrate table line-->
 
-          <!-- /hashrate table line-->
-        </div>
-        <!-- /hashrate table content-->
-      </div>
-      <!-- /hashrate table -->
-    </div>
-    <!-- hashrate graphic -->
-    <div class="miners-hash__right">
-      <span class="miners-hash__graphic-text miners-hash__graphic-text--graph"> </span>
-    </div>
-    <!-- /hashrate graphic -->
-  </div>
-  <!-- /hashrate section -->
+					<!-- /hashrate table line-->
+				</div>
+				<!-- /hashrate table content-->
+			</div>
+			<!-- /hashrate table -->
+		</div>
+		<!-- hashrate graphic -->
+		<div class="miners-hash__right">
+			<span class="miners-hash__graphic-text miners-hash__graphic-text--graph">
+			</span>
+		</div>
+		<!-- /hashrate graphic -->
+	</div>
+	<!-- /hashrate section -->
 
-  <!-- stat tabs section-->
-  <div class="stat-tabs">
-    <!-- stat tabs row-->
-    <div class="stat-tabs__row">
-      <button class="stat-tabs__btn stat-tabs__btn--active">Last Personal payouts</button>
-      <button class="stat-tabs__btn">Last miner blocks</button>
-      <button class="stat-tabs__btn">Last pool blocks</button>
-      <button class="stat-tabs__btn">Last pool payouts</button>
-    </div>
-    <!-- /stat tabs row-->
+	<!-- stat tabs section-->
+	<div class="stat-tabs">
+		<!-- stat tabs row-->
+		<div class="stat-tabs__row">
+			<button class="stat-tabs__btn stat-tabs__btn--active">
+				Last Personal payouts
+			</button>
+			<button class="stat-tabs__btn">Last miner blocks</button>
+			<button class="stat-tabs__btn">Last pool blocks</button>
+			<button class="stat-tabs__btn">Last pool payouts</button>
+		</div>
+		<!-- /stat tabs row-->
 
-    <!-- stat tabs content-->
-    <div class="stat-tabs__content">
-      <!-- Personal payouts block -->
-      <div
-        class="stat-tabs__content-item stat-tabs__content-item--show stat-tabs__content-item--personalPayout"
-      >
-        <!-- 1 item-->
+		<!-- stat tabs content-->
+		<div class="stat-tabs__content">
+			<!-- Personal payouts block -->
+			<div
+				class="stat-tabs__content-item stat-tabs__content-item--show stat-tabs__content-item--personalPayout"
+			>
+				<!-- 1 item-->
 
-        <!-- /1 item-->
-      </div>
-      <!-- /Personal payouts block-->
+				<!-- /1 item-->
+			</div>
+			<!-- /Personal payouts block-->
 
-      <!-- Last miner blocks -->
-      <div class="stat-tabs__content-item stat-tabs__content-item--minerBlocks">
-        <!-- 1 item-->
+			<!-- Last miner blocks -->
+			<div class="stat-tabs__content-item stat-tabs__content-item--minerBlocks">
+				<!-- 1 item-->
 
-        <!-- /1 item-->
-      </div>
-      <!-- /Last miner blocks -->
+				<!-- /1 item-->
+			</div>
+			<!-- /Last miner blocks -->
 
-      <!-- Last pool blocks -->
-      <div class="stat-tabs__content-item stat-tabs__content-item--poolBlocks">
-        <!-- 1 item-->
+			<!-- Last pool blocks -->
+			<div class="stat-tabs__content-item stat-tabs__content-item--poolBlocks">
+				<!-- 1 item-->
 
-        <!-- /1 item-->
-      </div>
-      <!-- /Last pool blocks -->
+				<!-- /1 item-->
+			</div>
+			<!-- /Last pool blocks -->
 
-      <!-- Last pool payouts -->
-      <div class="stat-tabs__content-item stat-tabs__content-item--poolPayouts">
-        <!-- 1 item-->
+			<!-- Last pool payouts -->
+			<div class="stat-tabs__content-item stat-tabs__content-item--poolPayouts">
+				<!-- 1 item-->
 
-        <!-- /1 item-->
-      </div>
-      <!-- /Last pool payouts block-->
-    </div>
-    <!-- /stat tabs content-->
-  </div>
-  <!-- /stat tabs section-->
+				<!-- /1 item-->
+			</div>
+			<!-- /Last pool payouts block-->
+		</div>
+		<!-- /stat tabs content-->
+	</div>
+	<!-- /stat tabs section-->
 </div>
 
 <div class="page-blocks">
-  <h2>Pool blocks</h2>
-  <div class="page-blocks__blocks-area"></div>
+	<div class="coin-sort__container">
+		<section class="coin-sort">
+			<div class="coin-sort__left">
+				<h4 class="coin-sort__title">
+					<span class="text-orange">POOL BLOCKS</span> - LAST 50 BLOCKS
+				</h4>
+			</div>
+		</section>
+	</div>
+	<div class="page-blocks__blocks-area"></div>
+</div>
+
+<div class="page-payments">
+	<div class="coin-sort__container">
+		<section class="coin-sort">
+			<div class="coin-sort__left">
+				<h4 class="coin-sort__title">
+					<span class="text-orange">POOL PAYMENTS</span> - LAST 50 PAYMENTS
+				</h4>
+			</div>
+		</section>
+	</div>
+	<div class="page-payments__payments-area"></div>
+</div>
+
+<div class="page-miners">
+	<div class="coin-sort__container">
+		<section class="coin-sort">
+			<div class="coin-sort__left">
+				<h4 class="coin-sort__title">
+					<span class="text-orange">POOL MINERS</span>
+				</h4>
+			</div>
+		</section>
+	</div>
+	<div class="page-miners__miners-area"></div>
 </div>

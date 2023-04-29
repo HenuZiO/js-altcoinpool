@@ -1,0 +1,12 @@
+.page-blocks,
+.page-payments,
+.page-miners {
+	&__blocks-area,
+	&__payments-area,
+	&__miners-area {
+		margin-top: 2rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+		gap: 2rem;
+	}
+}

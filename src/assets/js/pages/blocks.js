@@ -1,30 +1,30 @@
 function loadBlocksOnPage(poolBlocksData) {
-  let blockCard = ``;
-  let poolBlocksCount = 0;
+	let blockCard = ``;
+	let poolBlocksCount = 0;
 
-  let options = {
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-  };
+	let options = {
+		year: 'numeric',
+		month: 'numeric',
+		day: 'numeric',
+		hour: 'numeric',
+		minute: 'numeric'
+	};
 
-  console.log(blockCard);
+	console.log(blockCard);
 
-  poolBlocksData.forEach((el) => {
-    const blockDate = new Date(el.created).toLocaleString('ru', options);
-    const blockHeight = el.blockHeight;
-    const blockMiner = stripWallet(el.miner);
-    const blockEffort = (el.effort * 100).toFixed(2);
-    const blockStatus = el.status;
-    const blockReward = el.reward.toFixed(0);
-    const blockConfirmations = (el.confirmationProgress * 100).toFixed(2);
+	poolBlocksData.forEach(el => {
+		const blockDate = new Date(el.created).toLocaleString('ru', options);
+		const blockHeight = el.blockHeight;
+		const blockMiner = stripWallet(el.miner);
+		const blockEffort = (el.effort * 100).toFixed(2);
+		const blockStatus = el.status;
+		const blockReward = el.reward.toFixed(0);
+		const blockConfirmations = (el.confirmationProgress * 100).toFixed(2);
 
-    if (poolBlocksCount > 11) return;
-    poolBlocksCount += 1;
+		if (poolBlocksCount > 50) return;
+		poolBlocksCount += 1;
 
-    blockCard += `
+		blockCard += `
     <div class="tabs_mobile__item">
           <ul class="tabs_mobile__definitions">
             <li class="tabs_mobile__definition-item tabs_mobile__definition-item--date2">
@@ -57,7 +57,7 @@ function loadBlocksOnPage(poolBlocksData) {
             </li>
           </ul>
         </div>`;
-  });
+	});
 
-  $('.page-blocks__blocks-area').html(blockCard);
+	$('.page-blocks__blocks-area').html(blockCard);
 }

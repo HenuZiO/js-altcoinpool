@@ -16,8 +16,12 @@
 //= components/lastPoolPayouts.js
 //= components/blankMinerPage.js
 //= components/openBlockPage.js
+//= components/openPaymentsPage.js
+//= components/openMinersPage.js
 //= pages/homepage.js
 //= pages/blocks.js
+//= pages/payments.js
+//= pages/miners.js
 //= functional/spoilerSidebar.js
 //= functional/mobileNav.js
 //= functional/liveSearch.js

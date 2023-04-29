@@ -3,295 +3,300 @@
 /* Left Side - MENU */
 /**************************************/
 .header {
-  display: flex;
-  height: 40px;
-  width: 100%;
-  background-color: #0d0d0d;
-  box-shadow: 0 5px 10px rgba(#000, 0.4);
-  top: 0;
-  right: 0;
-  z-index: $z-index-header;
+	display: flex;
+	height: 40px;
+	width: 100%;
+	background-color: #0d0d0d;
+	box-shadow: 0 5px 10px rgba(#000, 0.4);
+	top: 0;
+	right: 0;
+	z-index: $z-index-header;
 
-  @include breakpoint($screen-1300) {
-    width: 100%;
-  }
+	@include breakpoint($screen-1300) {
+		width: 100%;
+	}
 
-  @include breakpoint($screen-1280) {
-    position: fixed;
-  }
+	@include breakpoint($screen-1280) {
+		position: fixed;
+	}
 
-  @include breakpoint($screen-896) {
-    position: fixed;
-    margin-bottom: 1rem;
-  }
+	@include breakpoint($screen-896) {
+		position: fixed;
+		margin-bottom: 1rem;
+	}
 
-  &__menu {
-    margin-left: 1.5rem;
+	&__menu {
+		margin-left: 1.5rem;
 
-    @include breakpoint($screen-1300) {
-      display: none;
-    }
+		@include breakpoint($screen-1300) {
+			display: none;
+		}
 
-    @include breakpoint($screen-896) {
-      display: flex;
-      margin-left: 0;
-    }
+		@include breakpoint($screen-896) {
+			display: flex;
+			margin-left: 0;
+		}
 
-    @include breakpoint($screen-667) {
-      display: none;
-    }
+		@include breakpoint($screen-667) {
+			display: none;
+		}
 
-    @include breakpoint($screen-414) {
-      display: none;
-    }
-  }
+		@include breakpoint($screen-414) {
+			display: none;
+		}
+	}
 
-  &__menu--left {
-    width: 45%;
+	&__menu--left {
+		width: 45%;
 
-    @include breakpoint($screen-896) {
-      width: 60%;
-    }
+		@include breakpoint($screen-896) {
+			width: 60%;
+		}
 
-    @include breakpoint($screen-375) {
-      width: 70%;
-    }
-  }
+		@include breakpoint($screen-375) {
+			width: 70%;
+		}
+	}
 
-  &__menu--right {
-    width: 55%;
-    display: flex;
-    justify-content: flex-end;
+	&__menu--right {
+		width: 55%;
+		display: flex;
+		justify-content: flex-end;
 
-    @include breakpoint($screen-896) {
-      width: 40%;
-    }
+		@include breakpoint($screen-896) {
+			width: 40%;
+		}
 
-    @include breakpoint($screen-375) {
-      width: 30%;
-    }
-  }
+		@include breakpoint($screen-375) {
+			width: 30%;
+		}
+	}
 
-  &__menu-list {
-    display: flex;
-  }
+	&__menu-list {
+		display: flex;
+	}
 
-  &__menu-item {
-    padding: 0.95rem 1.5rem;
-    transition: background-color linear 0.25s;
+	&__menu-item {
+		padding: 0.95rem 1.5rem;
+		transition: background-color linear 0.25s;
 
-    &:hover {
-      background-color: $orange;
-    }
-  }
+		&:hover {
+			background-color: $orange;
+		}
+	}
 
-  &__menu-link {
-    position: relative;
-    font-size: 1.1rem;
-    line-height: 1.1rem;
-    color: $white;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding-left: 1.2rem;
+	&__menu-link {
+		position: relative;
+		font-size: 1.1rem;
+		line-height: 1.1rem;
+		color: $white;
+		text-decoration: none;
+		text-transform: uppercase;
+		padding-left: 1.2rem;
 
-    &::before {
-      content: '';
-      width: 10px;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: -0.5rem;
-    }
+		&::before {
+			content: '';
+			width: 10px;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: -0.5rem;
+		}
 
-    &--home::before {
-      background: url('../img/top-menu-icons/home.svg') no-repeat;
-    }
+		&--home::before {
+			background: url('../img/top-menu-icons/home.svg') no-repeat;
+		}
 
-    &--faq::before {
-      background: url('../img/top-menu-icons/faq.svg') no-repeat;
-    }
+		&--faq::before {
+			background: url('../img/top-menu-icons/faq.svg') no-repeat;
+		}
 
-    &--support::before {
-      background: url('../img/top-menu-icons/support.svg') no-repeat;
-    }
+		&--support::before {
+			background: url('../img/top-menu-icons/support.svg') no-repeat;
+		}
 
-    &--blocks::before {
-      background: url('../img/top-menu-icons/blocks.svg') no-repeat;
-    }
-  }
+		&--blocks::before {
+			background: url('../img/top-menu-icons/blocks.svg') no-repeat;
+		}
 
-  &__mobile {
-    position: relative;
-    display: none;
+		&--payments::before {
+			background: url('../img/top-menu-icons/payments.svg') no-repeat;
+			top: 2px;
+		}
+	}
 
-    @include breakpoint($screen-1300) {
-      display: flex;
-    }
+	&__mobile {
+		position: relative;
+		display: none;
 
-    @include breakpoint($screen-896) {
-      display: none;
-    }
+		@include breakpoint($screen-1300) {
+			display: flex;
+		}
 
-    @include breakpoint($screen-667) {
-      display: flex;
-    }
+		@include breakpoint($screen-896) {
+			display: none;
+		}
 
-    @include breakpoint($screen-375) {
-      display: flex;
-    }
-  }
+		@include breakpoint($screen-667) {
+			display: flex;
+		}
 
-  &__mobile-title {
-    display: block;
-    font-size: 1.6rem;
-    line-height: 1.6rem;
-    margin-top: 1.2rem;
-    font-weight: 500;
-    margin-left: 5rem;
-  }
+		@include breakpoint($screen-375) {
+			display: flex;
+		}
+	}
 
-  &__mobile-title--link {
-    text-decoration: none;
-    color: inherit;
-  }
+	&__mobile-title {
+		display: block;
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+		margin-top: 1.2rem;
+		font-weight: 500;
+		margin-left: 5rem;
+	}
 
-  &__mobile-title--span {
-    color: $orange;
-  }
+	&__mobile-title--link {
+		text-decoration: none;
+		color: inherit;
+	}
 
-  &__burger {
-    display: none;
-    width: 2rem;
-    height: 1.5rem;
-    padding: 0;
+	&__mobile-title--span {
+		color: $orange;
+	}
 
-    background: none;
-    border: none;
+	&__burger {
+		display: none;
+		width: 2rem;
+		height: 1.5rem;
+		padding: 0;
 
-    font-size: 0;
-    color: transparent;
+		background: none;
+		border: none;
 
-    position: absolute;
-    top: 70%;
-    left: 1.5rem;
+		font-size: 0;
+		color: transparent;
 
-    transform: translateY(-50%);
+		position: absolute;
+		top: 70%;
+		left: 1.5rem;
 
-    &:before,
-    &:after,
-    span {
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: lighten($primary, 20%);
-      position: absolute;
-      left: 0;
-    }
+		transform: translateY(-50%);
 
-    &:before,
-    &:after {
-      content: '';
+		&:before,
+		&:after,
+		span {
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: lighten($primary, 20%);
+			position: absolute;
+			left: 0;
+		}
 
-      transition: transform 0.2s linear;
-    }
+		&:before,
+		&:after {
+			content: '';
 
-    &:before {
-      top: -1px;
-    }
+			transition: transform 0.2s linear;
+		}
 
-    &:after {
-      bottom: 0;
-    }
+		&:before {
+			top: -1px;
+		}
 
-    span {
-      top: 50%;
-      transform: translateY(-50%);
-      transition: opacity 0.3s linear;
-    }
+		&:after {
+			bottom: 0;
+		}
 
-    .show-sidebar & {
-      span {
-        opacity: 0;
-      }
+		span {
+			top: 50%;
+			transform: translateY(-50%);
+			transition: opacity 0.3s linear;
+		}
 
-      &:before,
-      &:after {
-        top: 50%;
-      }
+		.show-sidebar & {
+			span {
+				opacity: 0;
+			}
 
-      &:before {
-        transform: rotate(45deg);
-      }
+			&:before,
+			&:after {
+				top: 50%;
+			}
 
-      &:after {
-        transform: rotate(-45deg);
-      }
-    }
+			&:before {
+				transform: rotate(45deg);
+			}
 
-    @include breakpoint($screen-1300) {
-      display: block;
-    }
+			&:after {
+				transform: rotate(-45deg);
+			}
+		}
 
-    @include breakpoint($iphone-xr-rotate-bp) {
-      display: block;
-    }
+		@include breakpoint($screen-1300) {
+			display: block;
+		}
 
-    @include breakpoint($iphone12-rotate-bp) {
-      display: block;
-    }
+		@include breakpoint($iphone-xr-rotate-bp) {
+			display: block;
+		}
 
-    @include breakpoint($iphone6-rotate-bp) {
-      display: block;
-    }
+		@include breakpoint($iphone12-rotate-bp) {
+			display: block;
+		}
 
-    @include breakpoint($iphone-xr-bp) {
-      display: block;
-    }
+		@include breakpoint($iphone6-rotate-bp) {
+			display: block;
+		}
 
-    @include breakpoint($screen-375) {
-      display: block;
-    }
-  }
+		@include breakpoint($iphone-xr-bp) {
+			display: block;
+		}
+
+		@include breakpoint($screen-375) {
+			display: block;
+		}
+	}
 }
 
 /* Right Side - MENU + Select Language */
 /**************************************/
 
 .select-language {
-  background-color: $primary;
-  width: 100%;
-  max-width: 8rem;
-  display: flex;
-  justify-content: flex-start;
+	background-color: $primary;
+	width: 100%;
+	max-width: 8rem;
+	display: flex;
+	justify-content: flex-start;
 
-  &__flags {
-    margin-top: 0.9rem;
-  }
+	&__flags {
+		margin-top: 0.9rem;
+	}
 
-  &__flags-link {
-    display: inline-block;
-    padding-left: 1.5rem;
-  }
+	&__flags-link {
+		display: inline-block;
+		padding-left: 1.5rem;
+	}
 
-  &__flags-img {
-    opacity: 0.4;
-    transition: opacity linear 0.2s;
+	&__flags-img {
+		opacity: 0.4;
+		transition: opacity linear 0.2s;
 
-    &:hover:not(.select-language__flags-img--current) {
-      opacity: 0.7;
-      transform: scale(1.1);
-    }
+		&:hover:not(.select-language__flags-img--current) {
+			opacity: 0.7;
+			transform: scale(1.1);
+		}
 
-    &:hover {
-      .select-language__flags-img--current {
-        opacity: 0;
-      }
-    }
-  }
+		&:hover {
+			.select-language__flags-img--current {
+				opacity: 0;
+			}
+		}
+	}
 
-  &__flags-img--current {
-    opacity: 1;
-  }
+	&__flags-img--current {
+		opacity: 1;
+	}
 }
 
 /* end Block - header */
