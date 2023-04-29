@@ -105,6 +105,7 @@
 
 		&--home::before {
 			background: url('../img/top-menu-icons/home.svg') no-repeat;
+			top: 1px;
 		}
 
 		&--faq::before {
@@ -117,6 +118,12 @@
 
 		&--blocks::before {
 			background: url('../img/top-menu-icons/blocks.svg') no-repeat;
+		}
+
+		&--miners::before {
+			background: url('../img/top-menu-icons/miners.svg') no-repeat;
+			width: 15px;
+			top: 2px;
 		}
 
 		&--payments::before {

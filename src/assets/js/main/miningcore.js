@@ -47,30 +47,32 @@ const getProjectData = () =>
 			case 'payments':
 				$('.main-index').hide();
 				$('.sidebar').hide();
-				$('.sidebar-coin').show();
 				$('.page-dashboard').hide();
 				$('.page-blocks').hide();
+				$('.sidebar-coin').show();
 				$('.page-payments').show();
 				loadPaymentsPage(poolsData, poolPaymentData);
 				break;
 			case 'miners':
 				$('.main-index').hide();
 				$('.sidebar').hide();
-				$('.sidebar-coin').show();
 				$('.page-dashboard').hide();
 				$('.page-blocks').hide();
 				$('.page-payments').hide();
+				$('.sidebar-coin').show();
 				$('.page-miners').show();
-				loadMinersPage(poolsData, poolPaymentData);
+				loadMinersPage(poolsData, poolMinersData);
 				break;
 			default:
-				$('.main-index').show();
 				$('.header__menu--left').hide();
 				$('.header__menu--right').hide();
-				$('.sidebar').show();
 				$('.sidebar-coin').hide();
 				$('.page-dashboard').hide();
 				$('.page-blocks').hide();
+				$('.page-miners').hide();
+				$('.page-payments').hide();
+				$('.main-index').show();
+				$('.sidebar').show();
 				loadHomePage(poolsData);
 		}
 	});
@@ -122,9 +124,9 @@ function loadPaymentsPage(poolsData, poolPaymentData) {
 	loadPaymentsOnPage(poolPaymentData);
 }
 
-function loadMinersPage(poolsData, poolPaymentData) {
+function loadMinersPage(poolsData, poolMinersData) {
 	$('.sidebar-coin__block-title--not').hide();
 	$('.sidebar-coin__content--not').hide();
 	loadPoolsList(poolsData);
-	loadMinersOnPage(poolPaymentData);
+	loadMinersOnPage(poolMinersData);
 }
