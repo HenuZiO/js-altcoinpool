@@ -24,9 +24,11 @@ const getProjectData = () =>
 			case 'dashboard':
 				$('.main-index').hide();
 				$('.sidebar').hide();
+				$('.page-blocks').hide();
+				$('.page-miners').hide();
+				$('.page-payments').hide();
 				$('.sidebar-coin').show();
 				$('.page-dashboard').show();
-				$('.page-blocks').hide();
 				loadDashboardPage(
 					poolsData,
 					poolData,
@@ -41,6 +43,8 @@ const getProjectData = () =>
 				$('.sidebar').hide();
 				$('.sidebar-coin').show();
 				$('.page-dashboard').hide();
+				$('.page-payments').hide();
+				$('.page-miners').hide();
 				$('.page-blocks').show();
 				loadBlocksPage(poolsData, poolBlocksData);
 				break;
@@ -49,6 +53,7 @@ const getProjectData = () =>
 				$('.sidebar').hide();
 				$('.page-dashboard').hide();
 				$('.page-blocks').hide();
+				$('.page-miners').hide();
 				$('.sidebar-coin').show();
 				$('.page-payments').show();
 				loadPaymentsPage(poolsData, poolPaymentData);

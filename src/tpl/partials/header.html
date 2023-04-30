@@ -17,6 +17,37 @@
 					<span class="header__mobile-title--span">Altcoin</span>Pool.ru
 				</a>
 			</h1>
+
+			<div class="header__mobile-menu--right">
+				<nav class="header__mobile-menu">
+					<ul class="header__mobile-menu-list">
+						<li class="header__mobile-menu-item">
+							<a
+								class="header__menu-link header__menu-link--blocks"
+								href="/"
+								onclick="openBlocksPage()"
+								>Blocks</a
+							>
+						</li>
+						<li class="header__mobile-menu-item">
+							<a
+								class="header__menu-link header__menu-link--miners"
+								href="/"
+								onclick="openMinersPage()"
+								>Miners</a
+							>
+						</li>
+						<li class="header__mobile-menu-item">
+							<a
+								class="header__menu-link header__menu-link--payments"
+								href="/"
+								onclick="openPaymentsPage()"
+								>Payments</a
+							>
+						</li>
+					</ul>
+				</nav>
+			</div>
 		</div>
 	</div>
 
@@ -57,50 +88,174 @@
 		xmlns="http://www.w3.org/1999/html"
 	>
 		<div class="sidebar-mobile--container">
-			<div class="sidebar-mobile__item">
-				<span class="sidebar-mobile__list-title">Main info</span>
-				<ul class="sidebar-mobile__list">
-					<li class="sidebar-mobile__list-item">
-						<a class="sidebar-mobile__link" href="">Home</a>
-					</li>
-					<li class="sidebar-mobile__list-item">
-						<a class="sidebar-mobile__link" href="">FAQ</a>
-					</li>
-					<li class="sidebar-mobile__list-item">
-						<a class="sidebar-mobile__link" href="">Support</a>
-					</li>
-				</ul>
+			<div class="sidebar-coin__block-title sidebar-coin__block-title--not">
+				<h1 class="sidebar-coin__block-text">OCTA</h1>
+				LINKS
 			</div>
 
-			<div class="sidebar-mobile__item">
-				<span class="sidebar-mobile__list-title">Pool stats</span>
-				<ul class="sidebar-mobile__list">
-					<li class="sidebar-mobile__list-item">
-						<a class="sidebar-mobile__link" href="">Miners</a>
-					</li>
-					<li class="sidebar-mobile__list-item">
-						<a class="sidebar-mobile__link" href="">Blocks</a>
-					</li>
-					<li class="sidebar-mobile__list-item">
-						<a class="sidebar-mobile__link" href="">Payments</a>
-					</li>
-				</ul>
-			</div>
+			<div class="sidebar-coin__content sidebar-coin__content--not">
+				<div class="sidebar-coin__info">
+					<ul class="sidebar-coin__info-list">
+						<li class="sidebar-coin__info-item sidebar-coin__info-item--www">
+							<span class="sidebar-coin__info-item--left">
+								<span
+									class="sidebar-coin__info-icon sidebar-coin__info-icon--www"
+								></span>
+								Website:
+							</span>
+							<span class="sidebar-coin__info-item--right">
+								<a
+									class="sidebar-coin__info-link sidebar-coin__info-link--website"
+									href="#"
+									target="_blank"
+								></a>
+							</span>
+						</li>
+						<li
+							class="sidebar-coin__info-item sidebar-coin__info-item--explorer"
+						>
+							<span class="sidebar-coin__info-item--left">
+								<span
+									class="sidebar-coin__info-icon sidebar-coin__info-icon--explorer"
+								></span>
+								Explorer:
+							</span>
+							<span class="sidebar-coin__info-item--right">
+								<a
+									class="sidebar-coin__info-link sidebar-coin__info-link--explorer"
+									href="#"
+									target="_blank"
+									>Link to Explorer</a
+								>
+							</span>
+						</li>
+						<li class="sidebar-coin__info-item sidebar-coin__info-item--ds">
+							<span class="sidebar-coin__info-item--left">
+								<span
+									class="sidebar-coin__info-icon sidebar-coin__info-icon--discord"
+								></span>
+								Discord:
+							</span>
+							<span class="sidebar-coin__info-item--right">
+								<a
+									class="sidebar-coin__info-link sidebar-coin__info-link--discord"
+									href="#"
+									target="_blank"
+									>Link to Discord</a
+								>
+							</span>
+						</li>
+						<li class="sidebar-coin__info-item sidebar-coin__info-item--tg">
+							<span class="sidebar-coin__info-item--left">
+								<span
+									class="sidebar-coin__info-icon sidebar-coin__info-icon--tg"
+								></span>
+								Telegram:
+							</span>
+							<span class="sidebar-coin__info-item--right">
+								<a
+									class="sidebar-coin__info-link sidebar-coin__info-link--telegram"
+									href="#"
+									target="_blank"
+									>Link to Telegram</a
+								>
+							</span>
+						</li>
+						<li
+							class="sidebar-coin__info-item sidebar-coin__info-item--twitter"
+						>
+							<span class="sidebar-coin__info-item--left">
+								<span
+									class="sidebar-coin__info-icon sidebar-coin__info-icon--twitter"
+								></span>
+								Twitter:
+							</span>
+							<span class="sidebar-coin__info-item--right">
+								<a
+									class="sidebar-coin__info-link sidebar-coin__info-link--twitter"
+									href="#"
+									target="_blank"
+									>Link to Twitter</a
+								>
+							</span>
+						</li>
+					</ul>
 
-			<div class="sidebar-mobile__item">
-				<span class="sidebar-mobile__list-title">Socials</span>
-				<ul class="sidebar-mobile__list">
-					<li class="sidebar-mobile__list-item">
-						<a class="sidebar-mobile__link" href="">Discord</a>
-					</li>
-					<li class="sidebar-mobile__list-item">
-						<a class="sidebar-mobile__link" href="">Telegram</a>
-					</li>
-					<li class="sidebar-mobile__list-item">
-						<a class="sidebar-mobile__link" href="">Youtube</a>
-					</li>
-				</ul>
+					<div class="sidebar-coin__info-connect-area">
+						<button class="sidebar-coin__info-btn" data-name="spoiler-title">
+							How to connect?
+						</button>
+						<ul
+							class="sidebar-coin__info-connect-list sidebar-coin__info-connect-list--invisible"
+						>
+							<li class="sidebar-coin__info-connect-item">
+								<span class="sidebar-coin__info-connect-item--left">
+									Coin name
+								</span>
+								<span
+									class="sidebar-coin__info-connect-item--coin sidebar-coin__info-connect-item--right"
+								>
+								</span>
+							</li>
+							<li class="sidebar-coin__info-connect-item">
+								<span class="sidebar-coin__info-connect-item--left">
+									Coin Algorithm
+								</span>
+								<span
+									class="sidebar-coin__info-connect-item--algo sidebar-coin__info-connect-item--right"
+								>
+								</span>
+							</li>
+							<li class="sidebar-coin__info-connect-item">
+								<span class="sidebar-coin__info-connect-item--left">
+									Pool Wallet
+								</span>
+								<span
+									class="sidebar-coin__info-connect-item--poolWallet sidebar-coin__info-connect-item--right"
+								>
+								</span>
+							</li>
+							<li class="sidebar-coin__info-connect-item">
+								<span class="sidebar-coin__info-connect-item--left">
+									Payout Scheme
+								</span>
+								<span
+									class="sidebar-coin__info-connect-item--payout sidebar-coin__info-connect-item--right"
+								>
+								</span>
+							</li>
+							<li class="sidebar-coin__info-connect-item">
+								<span class="sidebar-coin__info-connect-item--left">
+									Minimum Payment
+								</span>
+								<span
+									class="sidebar-coin__info-connect-item--minPay sidebar-coin__info-connect-item--right"
+								>
+								</span>
+							</li>
+							<li class="sidebar-coin__info-connect-item">
+								<span class="sidebar-coin__info-connect-item--left">
+									Pool Fee
+								</span>
+								<span
+									class="sidebar-coin__info-connect-item--poolFee sidebar-coin__info-connect-item--right"
+								>
+								</span>
+							</li>
+							<ul class="sidebar-coin__info-connect-list--ports">
+								<li class="sidebar-coin__info-connect-item">
+									<span class="sidebar-coin__info-connect-item--left"> </span>
+									<span
+										class="sidebar-coin__info-connect-item--right sidebar-coin__info-connect-item--right-code"
+									>
+									</span>
+								</li>
+							</ul>
+						</ul>
+					</div>
+				</div>
 			</div>
+			<div class="sidebar-coin__blocks-location"></div>
 		</div>
 	</aside>
 </header>

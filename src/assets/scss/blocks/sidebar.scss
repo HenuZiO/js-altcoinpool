@@ -1,268 +1,273 @@
 /* Block - sidebar */
 
 .sidebar {
-  width: $sidebar-width;
-  height: 100vh;
-  background-color: $primary;
-  box-shadow: 5px 0 15px rgba(#050505, .1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: $z-index-sidebar;
+	width: $sidebar-width;
+	height: 100vh;
+	background-color: $primary;
+	box-shadow: 5px 0 15px rgba(#050505, 0.1);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: $z-index-sidebar;
 
+	@include breakpoint($screen-1600) {
+		width: 31rem;
+	}
 
-  @include breakpoint($screen-1600) {
-    width: 31rem;
-  }
+	@include breakpoint($screen-1500) {
+		width: 32rem;
+	}
 
-  @include breakpoint($screen-1500) {
-    width: 32rem;
-  }
+	@include breakpoint($screen-1435) {
+		width: 30rem;
+	}
 
-  @include breakpoint($screen-1435) {
-    width: 30rem;
-  }
+	@include breakpoint($screen-1400) {
+		width: 30rem;
+	}
 
-  @include breakpoint($screen-1400) {
-    width: 30rem;
-  }
+	@include breakpoint($screen-1366) {
+		width: 31rem;
+	}
 
-  @include breakpoint($screen-1366) {
-    width: 31rem;
-  }
+	@include breakpoint($screen-896) {
+		@include hide-sidebar-on-mobile(none);
+	}
 
-  @include breakpoint($screen-896) {
-    @include hide-sidebar-on-mobile(none)
-  }
+	@include breakpoint($screen-667) {
+		@include hide-sidebar-on-mobile(none);
+	}
 
-  @include breakpoint($screen-667) {
-    @include hide-sidebar-on-mobile(none)
-  }
+	@include breakpoint($screen-375) {
+		@include hide-sidebar-on-mobile(none);
+	}
 
-  @include breakpoint($screen-375) {
-    @include hide-sidebar-on-mobile(none)
-  }
+	&__header {
+		height: 270px;
+		background-color: $secondary;
+		box-shadow: 0 3px 3px rgba($secondary, 0.7);
+	}
 
-  &__header {
-    height: 270px;
-    background-color: $secondary;
-    box-shadow: 0 3px 3px rgba($secondary, .7);
-  }
+	&__header-img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 
-  &__header-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+	&__content {
+		padding: 0 2rem;
+		margin-top: 2rem;
+	}
 
-  &__content {
-    padding: 0 2rem;
-    margin-top: 2rem;
-  }
+	&__pool {
+		display: block;
+		text-align: center;
+	}
 
-  &__pool {
-    display: block;
-    text-align: center;
-  }
+	&__pool-title {
+		font-size: 2.4rem;
+		font-weight: 700;
+		line-height: 2.6rem;
+	}
 
-  &__pool-title {
-    font-size: 2.4rem;
-    font-weight: 700;
-    line-height: 2.6rem;
-  }
+	&__pool-desc {
+		color: $orange;
+		font-size: 2rem;
+		font-weight: 300;
+		line-height: 2.1rem;
+		margin-bottom: 2rem;
+	}
 
-  &__pool-desc {
-    color: $orange;
-    font-size: 2rem;
-    font-weight: 300;
-    line-height: 2.1rem;
-    margin-bottom: 2rem;
-  }
+	&__social-list {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		padding: 5rem 0;
+		border-top: 1px solid #2a2a2a;
+		border-bottom: 1px solid #2a2a2a;
 
-  &__social-list {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    padding: 5rem 0;
-    border-top: 1px solid #2a2a2a;
-    border-bottom: 1px solid #2a2a2a;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: -10;
+			top: 20%;
+		}
 
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      z-index: -10;
-      top: 20%;
-    }
+		&::before {
+			background: url('../img/sidebar-arrow-subscribe.png') no-repeat;
+			left: 1rem;
+			width: 95px;
+			height: 69px;
 
-    &::before {
-      background: url("../img/sidebar-arrow-subscribe.png") no-repeat;
-      left: 1rem;
-      width: 95px;
-      height: 69px;
+			@include breakpoint($ipad-pro-bp) {
+				background: url('../img/sidebar-arrow-subscribe-mobile.png') no-repeat;
+				left: 1.5rem;
+			}
 
-      @include breakpoint($ipad-pro-bp) {
-        background: url("../img/sidebar-arrow-subscribe-mobile.png") no-repeat;
-        left: 1.5rem;
-      }
+			@include breakpoint($surface-pro-bp) {
+				background: url('../img/sidebar-arrow-subscribe-mobile.png') no-repeat;
+				left: 0;
+			}
+		}
 
-      @include breakpoint($surface-pro-bp) {
-        background: url("../img/sidebar-arrow-subscribe-mobile.png") no-repeat;
-        left: 0;
-      }
+		&::after {
+			background: url('../img/sidebar-arrow-fun.png') no-repeat;
+			right: 2rem;
+			width: 182px;
+			height: 84px;
 
-    }
+			@include breakpoint($ipad-pro-bp) {
+				background: url('../img/sidebar-arrow-fun-mobile.png') no-repeat;
+				right: 1.5rem;
+			}
 
-    &::after {
-      background: url("../img/sidebar-arrow-fun.png") no-repeat;
-      right: 2rem;
-      width: 182px;
-      height: 84px;
+			@include breakpoint($surface-pro-bp) {
+				background: url('../img/sidebar-arrow-fun-mobile.png') no-repeat;
+				right: 1rem;
+			}
+		}
+	}
 
-      @include breakpoint($ipad-pro-bp) {
-        background: url("../img/sidebar-arrow-fun-mobile.png") no-repeat;
-        right: 1.5rem;
-      }
+	&__social-item {
+		margin: 0 1rem;
+	}
 
-      @include breakpoint($surface-pro-bp) {
-        background: url("../img/sidebar-arrow-fun-mobile.png") no-repeat;
-        right: 1rem;
-      }
-    }
-  }
+	&__social-img {
+		width: 25px;
+		height: 25px;
+		transition-duration: 0.2s;
 
-  &__social-item {
-    margin: 0 1rem;
-  }
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
 
-  &__social-img {
-    width: 25px;
-    height: 25px;
-    transition-duration: 0.2s;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-
-  &__pool-text {
-    margin-top: 2rem;
-  }
+	&__pool-text {
+		margin-top: 2rem;
+	}
 }
 
 .sidebar-mobile {
-  background-color: $secondary;
-  width: 80%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-top: 4rem;
-  padding: 1.5rem 2rem 0 2rem;
-  box-shadow: 5px 0 15px rgba(#050505, .3);
-  visibility: hidden;
-  z-index: $z-index-sidebar;
+	background-color: $secondary;
+	width: 80%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin-top: 4rem;
+	padding: 1.5rem 2rem 0 2rem;
+	box-shadow: 5px 0 15px rgba(#050505, 0.3);
+	visibility: hidden;
+	overflow-y: scroll;
+	z-index: $z-index-sidebar;
+	display: flex;
+	flex-direction: column;
 
-  &--container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 100%;
+	@include breakpoint($screen-1300) {
+		padding: 1rem;
+	}
 
-    @include breakpoint($iphone6-rotate-bp) {
-      flex-direction: column;
-    }
+	&--container {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		width: 100%;
 
-    @include breakpoint($screen-375) {
-      flex-direction: column;
-    }
-  }
+		@include breakpoint($iphone6-rotate-bp) {
+			flex-direction: column;
+		}
 
-  &__list-title {
-    display: block;
-    font-size: 1.6rem;
-    line-height: 1.6rem;
-    color: #ccc;
-    text-transform: uppercase;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    position: relative;
+		@include breakpoint($screen-375) {
+			flex-direction: column;
+		}
+	}
 
-    &::after {
-      content: "";
-      background-color: #222222;
-      height: 1px;
-      width: 50%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
-  }
+	&__list-title {
+		display: block;
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+		color: #ccc;
+		text-transform: uppercase;
+		margin-top: 1rem;
+		margin-bottom: 1.5rem;
+		padding-bottom: 1rem;
+		position: relative;
 
-  &__list {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 2rem;
-    margin-left: 2rem;
-    list-style: initial;
-    color: #2a2a2a;
-  }
+		&::after {
+			content: '';
+			background-color: #222222;
+			height: 1px;
+			width: 50%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
 
-  &__list-item {
-    padding: 0 3rem 0 0;
-  }
+	&__list {
+		display: flex;
+		justify-content: flex-start;
+		margin-bottom: 2rem;
+		margin-left: 2rem;
+		list-style: initial;
+		color: #2a2a2a;
+	}
 
-  &__link {
-    color: #767676;
-    text-decoration: none;
+	&__list-item {
+		padding: 0 3rem 0 0;
+	}
 
-    &:hover {
-      color: lighten($orange, 10%);
-    }
+	&__link {
+		color: #767676;
+		text-decoration: none;
 
-    &:active {
-      color: $orange;
-    }
-  }
+		&:hover {
+			color: lighten($orange, 10%);
+		}
 
-  @include breakpoint($iphone-xr-rotate-bp) {
-    @include show-sidebar-mobile-size(40%, 100%)
-  }
+		&:active {
+			color: $orange;
+		}
+	}
 
-  @include breakpoint($iphone12-rotate-bp) {
-    @include show-sidebar-mobile-size(35%, 100%)
-  }
+	@include breakpoint($iphone-xr-rotate-bp) {
+		@include show-sidebar-mobile-size(40%, 100%);
+	}
 
-  @include breakpoint($realme-bp) {
-    @include show-sidebar-mobile-size(100%, 30%)
-  }
+	@include breakpoint($iphone12-rotate-bp) {
+		@include show-sidebar-mobile-size(35%, 100%);
+	}
 
-  @include breakpoint($ipad-bp) {
-    @include show-sidebar-mobile-size(100%, 30%)
-  }
+	@include breakpoint($realme-bp) {
+		@include show-sidebar-mobile-size(100%, 30%);
+	}
 
-  @include breakpoint($iphone6-rotate-bp) {
-    @include show-sidebar-mobile-size(60%, 100%)
-  }
+	@include breakpoint($ipad-bp) {
+		@include show-sidebar-mobile-size(100%, 30%);
+	}
 
-  @include breakpoint($surface-bp) {
-    @include show-sidebar-mobile-size(55%, 100%)
-  }
+	@include breakpoint($iphone6-rotate-bp) {
+		@include show-sidebar-mobile-size(60%, 100%);
+	}
 
-  @include breakpoint($iphone-xr-bp) {
-    @include show-sidebar-mobile-size(100%, 60%)
-  }
+	@include breakpoint($surface-bp) {
+		@include show-sidebar-mobile-size(55%, 100%);
+	}
 
-  @include breakpoint($screen-375) {
-    @include show-sidebar-mobile-size(100%, 60%)
-  }
+	@include breakpoint($iphone-xr-bp) {
+		@include show-sidebar-mobile-size(100%, 60%);
+	}
 
-  @include breakpoint($fold-bp) {
-    @include show-sidebar-mobile-size(100%, 100%)
-  }
+	@include breakpoint($screen-375) {
+		@include show-sidebar-mobile-size(100%, 60%);
+	}
+
+	@include breakpoint($fold-bp) {
+		@include show-sidebar-mobile-size(100%, 100%);
+	}
 }
 
 /* end Block - sidebar */

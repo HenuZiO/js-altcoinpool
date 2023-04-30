@@ -12,63 +12,29 @@
 	right: 0;
 	z-index: $z-index-header;
 
-	@include breakpoint($screen-1300) {
-		width: 100%;
-	}
-
-	@include breakpoint($screen-1280) {
-		position: fixed;
-	}
-
-	@include breakpoint($screen-896) {
-		position: fixed;
-		margin-bottom: 1rem;
-	}
-
 	&__menu {
 		margin-left: 1.5rem;
 
 		@include breakpoint($screen-1300) {
 			display: none;
 		}
-
-		@include breakpoint($screen-896) {
-			display: flex;
-			margin-left: 0;
-		}
-
-		@include breakpoint($screen-667) {
-			display: none;
-		}
-
-		@include breakpoint($screen-414) {
-			display: none;
-		}
 	}
 
 	&__menu--left {
-		width: 45%;
+		width: 50%;
 
-		@include breakpoint($screen-896) {
-			width: 60%;
-		}
-
-		@include breakpoint($screen-375) {
-			width: 70%;
+		@include breakpoint($screen-1300) {
+			width: 100%;
 		}
 	}
 
 	&__menu--right {
-		width: 55%;
+		width: 50%;
 		display: flex;
 		justify-content: flex-end;
 
-		@include breakpoint($screen-896) {
-			width: 40%;
-		}
-
-		@include breakpoint($screen-375) {
-			width: 30%;
+		@include breakpoint($screen-1300) {
+			width: 0%;
 		}
 	}
 
@@ -135,21 +101,32 @@
 	&__mobile {
 		position: relative;
 		display: none;
+		width: 100%;
 
 		@include breakpoint($screen-1300) {
 			display: flex;
 		}
+	}
 
-		@include breakpoint($screen-896) {
-			display: none;
-		}
+	&__mobile-menu {
+		margin-left: 1.5rem;
+	}
 
-		@include breakpoint($screen-667) {
-			display: flex;
-		}
+	&__mobile-menu--right {
+		position: absolute;
+		left: 15.5rem;
+	}
 
-		@include breakpoint($screen-375) {
-			display: flex;
+	&__mobile-menu-list {
+		display: flex;
+	}
+
+	&__mobile-menu-item {
+		padding: 0.95rem 1.5rem;
+		transition: background-color linear 0.25s;
+
+		&:hover {
+			background-color: $orange;
 		}
 	}
 
@@ -160,6 +137,12 @@
 		margin-top: 1.2rem;
 		font-weight: 500;
 		margin-left: 5rem;
+
+		&::after {
+			content: '|';
+			color: #cecece;
+			padding-left: 1rem;
+		}
 	}
 
 	&__mobile-title--link {
@@ -263,46 +246,6 @@
 		@include breakpoint($screen-375) {
 			display: block;
 		}
-	}
-}
-
-/* Right Side - MENU + Select Language */
-/**************************************/
-
-.select-language {
-	background-color: $primary;
-	width: 100%;
-	max-width: 8rem;
-	display: flex;
-	justify-content: flex-start;
-
-	&__flags {
-		margin-top: 0.9rem;
-	}
-
-	&__flags-link {
-		display: inline-block;
-		padding-left: 1.5rem;
-	}
-
-	&__flags-img {
-		opacity: 0.4;
-		transition: opacity linear 0.2s;
-
-		&:hover:not(.select-language__flags-img--current) {
-			opacity: 0.7;
-			transform: scale(1.1);
-		}
-
-		&:hover {
-			.select-language__flags-img--current {
-				opacity: 0;
-			}
-		}
-	}
-
-	&__flags-img--current {
-		opacity: 1;
 	}
 }
 
