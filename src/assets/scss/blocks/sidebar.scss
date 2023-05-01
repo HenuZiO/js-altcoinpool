@@ -30,6 +30,10 @@
 		width: 31rem;
 	}
 
+	@include breakpoint($screen-1280) {
+		@include hide-sidebar-on-mobile(none);
+	}
+
 	@include breakpoint($screen-896) {
 		@include hide-sidebar-on-mobile(none);
 	}

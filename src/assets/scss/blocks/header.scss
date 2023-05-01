@@ -18,6 +18,10 @@
 		@include breakpoint($screen-1300) {
 			display: none;
 		}
+
+		@include breakpoint($screen-1280) {
+			display: none;
+		}
 	}
 
 	&__menu--left {
@@ -49,6 +53,10 @@
 		&:hover {
 			background-color: $orange;
 		}
+
+		@include breakpoint($screen-375) {
+			padding: 0;
+		}
 	}
 
 	&__menu-link {
@@ -59,6 +67,10 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		padding-left: 1.2rem;
+
+		@include breakpoint($screen-375) {
+			padding: 0;
+		}
 
 		&::before {
 			content: '';
@@ -84,17 +96,41 @@
 
 		&--blocks::before {
 			background: url('../img/top-menu-icons/blocks.svg') no-repeat;
+
+			@include breakpoint($screen-375) {
+				background: none;
+				padding: 0;
+				width: 0;
+				height: 0;
+				left: 0;
+			}
 		}
 
 		&--miners::before {
 			background: url('../img/top-menu-icons/miners.svg') no-repeat;
 			width: 15px;
 			top: 2px;
+
+			@include breakpoint($screen-375) {
+				background: none;
+				padding: 0;
+				width: 0;
+				height: 0;
+				left: 0;
+			}
 		}
 
 		&--payments::before {
 			background: url('../img/top-menu-icons/payments.svg') no-repeat;
 			top: 2px;
+
+			@include breakpoint($screen-375) {
+				background: none;
+				padding: 0;
+				width: 0;
+				height: 0;
+				left: 0;
+			}
 		}
 	}
 
@@ -103,7 +139,7 @@
 		display: none;
 		width: 100%;
 
-		@include breakpoint($screen-1300) {
+		@include breakpoint($screen-1280) {
 			display: flex;
 		}
 	}
@@ -119,6 +155,15 @@
 
 	&__mobile-menu-list {
 		display: flex;
+		position: relative;
+
+		&::before {
+			content: '|';
+			color: #cecece;
+			position: absolute;
+			top: 9px;
+			left: -5px;
+		}
 	}
 
 	&__mobile-menu-item {
@@ -127,6 +172,10 @@
 
 		&:hover {
 			background-color: $orange;
+		}
+
+		@include breakpoint($screen-375) {
+			padding: 0.95rem 0.9rem;
 		}
 	}
 
@@ -137,12 +186,6 @@
 		margin-top: 1.2rem;
 		font-weight: 500;
 		margin-left: 5rem;
-
-		&::after {
-			content: '|';
-			color: #cecece;
-			padding-left: 1rem;
-		}
 	}
 
 	&__mobile-title--link {

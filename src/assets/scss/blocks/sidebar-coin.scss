@@ -415,15 +415,15 @@
 	}
 
 	@include breakpoint($realme-bp) {
-		@include show-sidebar-mobile-size(100%, 50%);
+		@include show-sidebar-mobile-size(50%, 100%);
 	}
 
 	@include breakpoint($ipad-bp) {
-		@include show-sidebar-mobile-size(100%, 50%);
+		@include show-sidebar-mobile-size(60%, 100%);
 	}
 
 	@include breakpoint($iphone6-rotate-bp) {
-		@include show-sidebar-mobile-size(60%, 100%);
+		@include show-sidebar-mobile-size(50%, 100%);
 	}
 
 	@include breakpoint($surface-bp) {
@@ -435,7 +435,7 @@
 	}
 
 	@include breakpoint($screen-375) {
-		@include show-sidebar-mobile-size(100%, 60%);
+		@include show-sidebar-mobile-size(100%, 100%);
 	}
 }
 
