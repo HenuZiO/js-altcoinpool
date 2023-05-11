@@ -30,7 +30,7 @@ async function getPoolData() {
 async function getPoolBlocksData() {
 	try {
 		const response = await fetch(
-			`https://api.altcoinpool.ru/api/pools/${currentPool}/blocks?pageSize=1000`
+			`https://api.altcoinpool.ru/api/pools/${currentPool}/blocks?pageSize=250`
 		);
 		if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
 		const data = await response.json();
@@ -43,7 +43,7 @@ async function getPoolBlocksData() {
 async function getPoolPaymentsData() {
 	try {
 		const response = await fetch(
-			`https://api.altcoinpool.ru/api/pools/${currentPool}/payments?pageSize=150`
+			`https://api.altcoinpool.ru/api/pools/${currentPool}/payments?pageSize=100`
 		);
 		if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
 		const data = await response.json();

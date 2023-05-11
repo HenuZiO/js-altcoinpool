@@ -18,7 +18,7 @@ function loadNetworkStats(poolData, poolBlocksData) {
 	).toLocaleString();
 
 	let blockReward = poolBlocksData[1]
-		? poolBlocksData[15].reward.toFixed(2)
+		? poolBlocksData[poolBlocksData.length - 1].reward.toFixed(2)
 		: 'No info';
 
 	let formattedNetworkBlockTime;
