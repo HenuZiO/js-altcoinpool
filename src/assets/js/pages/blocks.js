@@ -10,8 +10,6 @@ function loadBlocksOnPage(poolBlocksData) {
 		minute: 'numeric'
 	};
 
-	console.log(blockCard);
-
 	poolBlocksData.forEach(el => {
 		const blockDate = new Date(el.created).toLocaleString('ru', options);
 		const blockHeight = el.blockHeight;

@@ -1,9 +1,10 @@
 function loadAdditionalStats(poolData, poolBlocksData, minerData) {
 	let reward = 0;
+
 	for (let i = 0; i < poolBlocksData.length; i++) {
 		const currentBlock = poolBlocksData[i];
 		if (currentBlock.status === 'confirmed') {
-			reward = currentBlock.reward;
+			reward = Math.round(currentBlock.reward);
 			break;
 		}
 	}
@@ -24,7 +25,7 @@ function loadAdditionalStats(poolData, poolBlocksData, minerData) {
 		});
 	}
 
-	let networkHashrate = poolData.pool.networkStats.networkHashrate;
+	let networkHashrate = Math.round(poolData.pool.networkStats.networkHashrate);
 
 	let minerLastPayment = minerData.lastPayment
 		? new Date(minerData.lastPayment).toLocaleString()
@@ -34,10 +35,8 @@ function loadAdditionalStats(poolData, poolBlocksData, minerData) {
 
 	let minerPendingShares = minerData.pendingShares
 		? Math.round(minerData.pendingShares)
-		: 'No connect';
+		: '0';
 
-	try {
-	} catch (error) {}
 	let ancientBlock;
 	if (lastDayMinerBlocks.length > 0) {
 		ancientBlock = lastDayMinerBlocks[lastDayMinerBlocks.length - 1];
@@ -53,19 +52,19 @@ function loadAdditionalStats(poolData, poolBlocksData, minerData) {
 	let mostRecentBlockHeight = recentBlock ? recentBlock.blockHeight : '';
 	let mostAncientBlockHeight = ancientBlock ? ancientBlock.blockHeight : '';
 
-	let networkBlockTime = lastDayMinerBlocks[0]
-		? (mostRecentBlockTimeInSeconds - mostAncientBlockTimeInSeconds) /
-		  (mostRecentBlockHeight - mostAncientBlockHeight)
-		: 'Not enough info';
+	let networkBlockTime =
+		lastDayMinerBlocks.length >= 2
+			? (mostRecentBlockTimeInSeconds - mostAncientBlockTimeInSeconds) /
+			  (mostRecentBlockHeight - mostAncientBlockHeight)
+			: 'Need more blocks to info';
 
 	let formattedNetworkBlockTime =
 		networkBlockTime < 60
 			? `${networkBlockTime.toFixed(2)} secs`
 			: `${(networkBlockTime / 60).toFixed(2)} mins`;
 
-	let blocksTTF = minerData.performance
-		? (networkHashrate / minerHash) * networkBlockTime
-		: '';
+	let blocksTTF =
+		minerHash != 0 ? (networkHashrate / minerHash) * networkBlockTime : 0;
 
 	let estMinerCoins =
 		reward * (86400 / networkBlockTime) * (minerHash / networkHashrate) -
@@ -98,30 +97,39 @@ function loadAdditionalStats(poolData, poolBlocksData, minerData) {
 	const htmlPendingShares = $('.additional-stats__item-text--pending').text(
 		minerPendingShares
 	);
+
 	const htmlFoundedBlocks = $('.additional-stats__item-text--blocks').html(`
     ${blocksPending} <span class="additional-stats__item-text--little">(pending)</span> |
     ${blocksConfirmed} <span class="additional-stats__item-text--little">(confirmed)</span>
   `);
+
 	const html24hEstEarnings = $('.additional-stats__item-text--esteanings')
 		.html(`
     ${
-			minerData.performance ? estMinerCoins.toLocaleString() : '0'
+			blocksTTF > 0 ? `~ ${estMinerCoins.toLocaleString()}` : '0'
 		} <span class="additional-stats__item-text--little">(coins)</span> |
     ${
-			minerData.performance ? blocksPer24Hrs.toFixed(2) : '0'
+			blocksTTF > 0 ? `~ ${blocksPer24Hrs.toFixed(0)}` : '0'
 		} <span class="additional-stats__item-text--little">(blocks)</span>
   `);
+
 	const htmlLastPayment = $('.additional-stats__item-text--payment').text(
 		minerLastPayment
 	);
+
 	const htmlLastPaymentLink = minerLastPaymentLink
 		? $('.additional-stats__item-link--payment')
 				.attr('href', `${minerLastPaymentLink}`)
 				.text('See in explorer')
 		: $('.additional-stats__item-link--payment').text('No payments yet');
+
 	const htmlNetworkBlockTime = $(
 		'.additional-stats__item-text--blocktime'
 	).text(
-		`${lastDayMinerBlocks[0] ? formattedNetworkBlockTime : networkBlockTime}`
+		`${
+			lastDayMinerBlocks.length >= 2
+				? formattedNetworkBlockTime
+				: networkBlockTime
+		}`
 	);
 }
